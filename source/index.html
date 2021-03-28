@@ -79,11 +79,11 @@
         <h2 class="section-title advantages__title" aria-hidden="true">Коротко о нас:</h2>
         <!-- или добавить
           <h2 class="visually-hidden">Наши преимущества:</h2>
-          показалось, что усложняю. Нормальный такой заголовок, хоть и не заявляет о преимуществах
+          показалось, что усложняю. Нормальный такой заголовок, хоть и не заявляет напрямую о преимуществах
          -->
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--pure">Экологически чистые материалы</li>
-          <li class="advantages__item advantages__item--scandinavian">Скандинавский стиль по российской цене</li>
+          <li class="advantages__item advantages__item--nordic">Скандинавский стиль по российской цене</li>
           <li class="advantages__item advantages__item--likes">Увеличивает лайки на фотографиях</li>
           <li class="advantages__item advantages__item--cute">Связано вручную с любовью и умилением</li>
           <li class="advantages__item advantages__item--homies">Поддержка отечественного производителя</li>
@@ -120,6 +120,7 @@
             г.&nbsp;Санкт-Петербург  ул.&nbsp;Большая Конюшенная  д.&nbsp;19/8, офис&nbsp;101
           </dd>
         </dl>
+
         <img class="map-image contacts__map" src="img/map-mobile@1x.png" alt="Отметка на карте магазина Мишка: г.Санкт-Петербург  ул.Большая Конюшенная  д.19/8, офис 101" width="320" height="454">
         <button class="contacts__button button button--contact-us"></button>
       </section>
@@ -153,9 +154,22 @@
 
     <section class="modal modal--add-to-cart">
       <h2 class="modal__title">Добавить в корзину</h2>
-      <p class="modal__text">Выберите размер:</p>
-      <div class="modal__size-value"></div>
-      <button type="submit"></button>
+      <form action="" method="POST">
+        <p class="modal__text">Выберите размер:</p>
+        <label class="modal__item-size modal__item-size">
+          <input class="visually-hidden" type="checkbox" name="promo-item-size" value="small">
+          S
+        </label>
+        <label class="modal__item-size modal__item-size">
+          <input class="visually-hidden" type="checkbox" name="promo-item-size" value="medium">
+          M
+        </label>
+        <label class="modal__item-size modal__item-size">
+          <input class="visually-hidden" type="checkbox" name="promo-item-size" value="large">
+          L
+        </label>
+        <button type="submit" aria-label="Положить выбранный товар в корзину"></button>
+      </form>
     </section>
   </body>
 </html>
