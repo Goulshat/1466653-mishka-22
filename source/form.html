@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8">
+  <title>Mishka: заказать товар</title>
+</head>
+<body class="page__body">
+  <header class="header">
+    <a class="header__logo-link">
+      <img class="header__logo-img" src="img/logo/mishka-logo-mobile.svg" alt="Магазин товаров ручной работы Мишка" width="85" height="35">
+    </a>
+
+    <nav class="header__nav header__nav--open">
+      <button class="header__nav-toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#">Каталог товаров</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#">Вязание на заказ</a>
+        </li>
+      </ul>
+
+      <ul class="header__order-list">
+        <li class="header__order-item">
+          <a class="header__search-link" href="#">Поиск по сайту</a>
+        </li>
+        <li class="header__order-item">
+          <a class="header__cart-link" href="#">
+          Корзина:
+            <span>пока пуста</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <h1 class="main-content__title main-title">Вязание на заказ</h1>
+    <form class="order-form main-content__form" action="https://echo.htmlacademy.ru" method="POST">
+      <p class="order-form__lead">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+
+      <fieldset class="order-form__fieldset">
+        <legend class="form-headline order-form__legend">Тип</legend>
+        <label class="form-label form-label--radio">
+          <input class="visually-hidden" type="radio" name="item-type" value="accessories" checked>
+          <span class="form-label__text">Аксессуар для интерьера</span>
+        </label>
+        <label class="form-label form-label--radio">
+          <input class="visually-hidden" type="radio" name="item-type" value="toys">
+          <span class="form-label__text">Детская игрушка</span>
+        </label>
+      </fieldset>
+
+      <fieldset class="order-form__fieldset">
+        <legend class="form-headline order-form__legend">Цвет</legend>
+        <label class="form-label form-label--checkbox">
+          <input class="visually-hidden" type="checkbox" name="item-color" value="white" checked>
+          <span class="form-label__text">Белый</span>
+        </label>
+        <label class="form-label form-label--checkbox">
+          <input class="visually-hidden" type="checkbox" name="item-color" value="grey" checked>
+          <span class="form-label__text">Серый</span>
+        </label>
+        <label class="form-label form-label--checkbox">
+          <input class="visually-hidden" type="checkbox" name="item-color" value="tiffany">
+          <span class="form-label__text">Тиффани</span>
+        </label>
+        <label class="form-label form-label--checkbox">
+          <input class="visually-hidden" type="checkbox" name="item-color" value="black">
+          <span class="form-label__text">Черный</span>
+        </label>
+        <label class="form-label form-label--checkbox">
+          <input class="visually-hidden" type="checkbox" name="item-color" value="pink">
+          <span class="form-label__text">Розовый</span>
+        </label>
+        <label class="form-label form-label--checkbox">
+          <input class="visually-hidden" type="checkbox" name="item-color" value="orange">
+          <span class="form-label__text">Оранжевый</span>
+        </label>
+      </fieldset>
+
+      <fieldset class="order-form__fieldset">
+        <legend class="form-headline">ФИО</legend>
+        <label class="form-label">
+          <span class="form-label__text">Имя:</span>
+          <input class="form-label__input" type="text" name="first-name" placeholder="Введите ваше имя*" required>
+        </label>
+        <label class="form-label">
+          <span class="form-label__text">Фамилия:</span>
+          <input class="form-label__input" type="text" name="last-name" placeholder="Укажите фамилию*" required>
+        </label>
+        <label class="form-label">
+          <span class="form-label__text">Отчество:</span>
+          <input class="" type="text" name="middle-name" placeholder="Отчество если желаете*" >
+        </label>
+        <label class="form-label">
+          <span class="form-headline">Тел:</span>
+          <input class="form-label__input" type="tel" name="order-tel" placeholder="+7 XXX XXX XX XX*" >
+          <img src="img/icons/phone-icon.svg" width="25" height="24" alt="" aria-hidden="true">
+        </label>
+        <label class="form-label">
+          <span class="form-headline">E-mail:</span>
+          <input class="form-label__input" type="email" name="order-email" placeholder="Ваш Email*">
+          <img src="img/icons/email-icon.svg" width="32" height="21" alt="" aria-hidden="true">
+        </label>
+        <label class="form-label">
+          <span class="form-headline">Доп</span>
+          <textarea class="form-label__textarea" name="extra-info" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </label>
+      </fieldset>
+      <small class="order-form__required-text">* Поля обязательный для заполнения</small>
+      <button class="button order-form__button" type="submit">Отправить заказ</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <a class="footer__logo-link footer__logo-link--hidden">
+      <img class="footer__logo-img" src="img/logo/mishka-logo-footer.svg" width="101" height="34" alt="Логотип магазина Mishka">
+    </a>
+
+    <section class="footer__socials">
+      <h2 class="visually-hidden">Найти нас в соцсетях</h2>
+      <ul class="socials footer__socials-list">
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            <img src="img/icons/insta-icon.svg" width="22" height="22" alt="Инстаграм">
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            <img src="img/icons/fb-icon.svg" width="15" height="29" alt="Фейсбук">
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            <img src="img/icons/twitter-icon.svg" width="24" height="20" alt="Твиттер">
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <p class="footer__copyright">
+      Разработано
+      <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <img src="img/logo/htmlacademy.svg" width="27" height="34" alt="Логотип HTML-Academy">
+      </a>
+    </p>
+  </footer>
+</body>
+</html>
