@@ -25,10 +25,19 @@
   min-width: 82px;
   padding: 18px;
   border: 2px solid @block-shadow;
+
+  &:hover,
+  &:focus {
+    border-color: @text-grey-opacity;
+  }
+}
+
+.modal-order__label input:focus + .modal-order__size {
+  border-color: @text-grey-opacity;
 }
 
 .modal-order__label input:checked + .modal-order__size {
-  border: 2px solid @tiffany;
+  border-color: @tiffany;
 }
 
 .modal-order__button {
@@ -37,4 +46,14 @@
   color: white;
   background-color: @tiffany;
   border-color: @tiffany;
+
+  &:hover,
+  &:focus {
+    background-color: @tiffany-darker;
+    border-color: @tiffany-darker;
+  }
+
+  &:active {
+    color: @white-opacity;
+  }
 }

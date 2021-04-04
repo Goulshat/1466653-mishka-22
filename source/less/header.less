@@ -38,10 +38,13 @@
   }
 }
 
-.header__nav-list {
+.header__nav-list,
+.header__order-list {
   .clear-list;
 }
 
-.header__order-list {
-  .clear-list;
+.header__nav-item,
+.header__order-item {
+  box-shadow: 0 1px @block-shadow,
+    inset 0 1px @block-shadow;
 }
