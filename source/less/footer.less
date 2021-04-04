@@ -1,0 +1,38 @@
+.footer {
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: @grey-bg;
+}
+
+.footer__logo-link {
+  display: inline-block;
+  &--hidden {
+    display: none;
+  }
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 80px;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 19px;
+  color: @black;
+}
+
+.footer__copyright-link {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 27px;
+
+  &:hover {
+    fill: @tiffany-darker;
+  }
+  &:active {
+    fill: @tiffany-darker;
+    stroke-opacity: 0.3;
+  }
+}

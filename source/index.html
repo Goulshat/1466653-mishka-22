@@ -6,30 +6,30 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="header">
-      <a class="header__logo-link">
-        <img class="header__logo-img" src="img/logo/mishka-logo-mobile.svg" alt="Магазин товаров ручной работы Мишка" width="85" height="35">
+    <header class="header page__header">
+      <a class="header-item header__logo-link">
+        <img class="header__logo-img" src="img/logo/mishka-logo-mobile.svg" width="85" height="35" alt="Магазин товаров ручной работы Мишка">
       </a>
 
-      <nav class="header__nav header__nav--open">
-        <button class="header__nav-toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <button class="header__nav-toggle header__nav-toggle--to-close" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
 
+      <nav class="header__nav"><!-- + класс .header__nav--closed-->
         <ul class="header__nav-list">
-          <li class="header__nav-item">
+          <li class="header-item header__nav-item">
             <a class="header__nav-link" href="#">Каталог товаров</a>
           </li>
-          <li class="header__nav-item">
+          <li class="header-item header__nav-item">
             <a class="header__nav-link" href="#">Вязание на заказ</a>
           </li>
         </ul>
 
         <ul class="header__order-list">
-          <li class="header__order-item">
+          <li class="header-item header__order-item">
             <a class="header__search-link" href="#">Поиск по сайту</a>
           </li>
-          <li class="header__order-item">
+          <li class="header-item header__order-item">
             <a class="header__cart-link" href="#">
             Корзина:
               <span>пока пуста</span>
@@ -39,13 +39,15 @@
       </nav>
     </header>
 
-    <main class="main-content">
-      <h1 class="main-content__title main-title">Милые штучки ручной работы для дома</h1>
-
+    <main class="main-content page__main">
+      <h1 class="main-content__hero main-title">
+        Милые штуки ручной<br>
+        работы для дома
+      </h1>
       <section class="main-content__categories">
         <h2 class="visually-hidden">Наши товары</h2>
-        <a class="main-content__categories-link" href="#">Предметы интерьера</a>
-        <a class="main-content__categories-link" href="#">Детские игрушки</a>
+        <a class="main-content__categories-link main-content__categories-link--left" href="#">Предметы интерьера</a>
+        <a class="main-content__categories-link main-content__categories-link--right" href="#">Детские игрушки</a>
       </section>
 
       <section class="promo main-content__promo">
@@ -53,7 +55,7 @@
         <b class="promo__heading">Товар недели</b>
         <p class="promo__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
 
-        <dl class="promo__properties-list properties">
+        <dl class="properties promo__properties-list">
           <div class="properties__item-wrap">
             <dt class="properties__item">Цвет:</dt>
             <dd class="properties__value">&laquo;Тиффани&raquo;/серый</dd>
@@ -80,11 +82,11 @@
         <h2 class="section-title advantages__title" aria-hidden="true">Коротко о нас:</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--pure">Экологически чистые материалы</li>
-          <li class="advantages__item advantages__item--nordic">Скандинавский стиль по российской цене</li>
-          <li class="advantages__item advantages__item--likes">Увеличивает лайки на фотографиях</li>
-          <li class="advantages__item advantages__item--cute">Связано вручную с любовью и умилением</li>
+          <li class="advantages__item advantages__item--nordic">Скандинавский стиль по&nbsp;российской цене</li>
+          <li class="advantages__item advantages__item--likes">Увеличивает лайки на&nbsp;фотографиях</li>
+          <li class="advantages__item advantages__item--cute">Связано вручную с&nbsp;любовью и умилением</li>
           <li class="advantages__item advantages__item--homies">Поддержка отечественного производителя</li>
-          <li class="advantages__item advantages__item--present">Поставляется в подарочной упаковке</li>
+          <li class="advantages__item advantages__item--present">Поставляется в&nbsp;подарочной упаковке</li>
         </ul>
       </section>
 
@@ -115,11 +117,11 @@
           <dd class="contacts__description">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</dd>
         </dl>
         <img class="contacts__map" src="img/map-mobile@1x.png" alt="Отметка на карте магазина Мишка" width="320" height="454">
-        <button class="button button--contact-us contacts__button"></button>
+        <button class="button button--contact-us contacts__button">Напишите нам</button>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer page__footer">
       <a class="footer__logo-link footer__logo-link--hidden">
         <img class="footer__logo-img" src="img/logo/mishka-logo-footer.svg" width="101" height="34" alt="Логотип магазина Mishka">
       </a>
@@ -153,23 +155,23 @@
       </p>
     </footer>
 
-    <section class="modal modal--add-to-cart">
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <form action="https://echo.htmlacademy.ru" method="POST">
-        <p class="modal__text">Выберите размер:</p>
-        <label class="modal__item-size modal__item-size">
-          <input class="visually-hidden" type="checkbox" name="promo-item-size" value="small">
-          S
+    <section class="modal-order modal-order--add-to-cart">
+      <h2 class="modal-order__title">Добавить в&nbsp;корзину</h2>
+      <form class="modal-order__form" action="https://echo.htmlacademy.ru" method="POST">
+        <p class="modal-order__text">Выберите размер:</p>
+        <label class="modal-order__label" aria-label="S, маленький">
+          <input class="visually-hidden" type="checkbox" name="promo-item-size" value="small" checked>
+          <span class="modal-order__size">S</span>
         </label>
-        <label class="modal__item-size modal__item-size">
+        <label class="modal-order__label" aria-label="M, средний">
           <input class="visually-hidden" type="checkbox" name="promo-item-size" value="medium">
-          M
+          <span class="modal-order__size">M</span>
         </label>
-        <label class="modal__item-size modal__item-size">
+        <label class="modal-order__label" aria-label="L, большой">
           <input class="visually-hidden" type="checkbox" name="promo-item-size" value="large">
-          L
+          <span class="modal-order__size">L</span>
         </label>
-        <button class="button modal__button" type="submit" aria-label="Положить выбранный товар в корзину"></button>
+        <button class="button modal-order__button" type="submit" aria-label="Добавить выбранный товар в корзину">Добавить</button>
       </form>
     </section>
   </body>

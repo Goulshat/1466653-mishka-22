@@ -1,0 +1,46 @@
+.header {
+  position: relative;
+  color: @black;
+  font-weight: 700;
+}
+
+.header__logo-link {
+  padding-left: 30px;
+  justify-content: center;
+  box-shadow: 0 1px @block-shadow;
+}
+
+.header__logo-img {
+  display: block;
+  width: 85px;
+  height: 35px;
+}
+
+.header__nav {
+  &--closed {
+    display: none;
+  }
+}
+
+/* Кнопка открыть-закрыть меню */
+.header__nav-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 79px;
+  height: 79px;
+  border: none;
+  background: url("../img/icons/menu-open.svg") center center no-repeat;
+  &--to-close {
+    background-image: url("../img/icons/menu-close.svg");
+  }
+}
+
+.header__nav-list {
+  .clear-list;
+}
+
+.header__order-list {
+  .clear-list;
+}

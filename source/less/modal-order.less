@@ -1,0 +1,40 @@
+.modal-order {
+  padding: 30px 30px 45px 30px;
+  width: 320px;
+  text-align: center;
+  border: 1px solid @modal-border;
+  box-shadow: 0px 5px 10px @modal-shadow;
+}
+
+.modal-order__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 25px;
+  line-height: 30px;
+  color: @black;
+  text-transform: uppercase;
+}
+
+.modal-order__text {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.modal-order__size {
+  display: inline-block;
+  min-width: 82px;
+  padding: 18px;
+  border: 2px solid @block-shadow;
+}
+
+.modal-order__label input:checked + .modal-order__size {
+  border: 2px solid @tiffany;
+}
+
+.modal-order__button {
+  width: 100%;
+  margin-top: 30px;
+  color: white;
+  background-color: @tiffany;
+  border-color: @tiffany;
+}
