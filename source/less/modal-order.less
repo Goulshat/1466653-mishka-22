@@ -32,12 +32,14 @@
   }
 }
 
-.modal-order__label input:focus + .modal-order__size {
-  border-color: @text-grey-opacity;
-}
+.modal-order__label {
+  & input:focus + .modal-order__size {
+    border-color: @text-grey-opacity;
+  }
 
-.modal-order__label input:checked + .modal-order__size {
-  border-color: @tiffany;
+  & input:checked + .modal-order__size {
+    border-color: @tiffany;
+  }
 }
 
 .modal-order__button {
