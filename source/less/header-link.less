@@ -1,0 +1,24 @@
+.header-link {
+  display: flex;
+  align-items: center;
+  min-height: 79px;
+  padding: 22px 30px 22px 76px;
+
+
+  &:hover,
+  &:focus {
+    color: @text-grey-hover;
+
+    img {
+      fill: @tiffany;
+    }
+  }
+
+  &:active {
+    color: @text-grey-light;
+
+    img {
+      fill-opacity: 0.3;
+    }
+  }
+}

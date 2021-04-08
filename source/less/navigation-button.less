@@ -1,0 +1,29 @@
+.navigation-button {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 130px;
+  min-height: 52px;
+  background-color: @white;
+  background-position: 50% 50%;
+  background-size: 50px 26px;
+  background-repeat: no-repeat;
+  border: 1px solid @block-shadow;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--back {
+    background-image: url("../img/icons/huge-arrow-left.svg");
+  }
+
+  &--forward {
+    border-left: none;
+    background-image: url("../img/icons/huge-arrow-right.svg");
+  }
+}
