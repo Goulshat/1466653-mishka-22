@@ -5,7 +5,7 @@
   <title>Mishka: заказать товар</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page__body">
+<body class="order-page page__body ">
   <header class="header">
     <a class="header__logo-link">
       <img class="header__logo-img" src="img/logo/mishka-logo-mobile.svg" alt="Магазин товаров ручной работы Мишка" width="85" height="35">
@@ -40,17 +40,17 @@
   </header>
 
   <main class="main-content">
-    <h1 class="main-title">Вязание на заказ</h1>
+    <h1 class="main-title order-page__main-title">Вязание на заказ</h1>
     <form class="order-form main-content__form" action="https://echo.htmlacademy.ru" method="POST">
       <p class="order-form__lead">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
       <fieldset class="order-form__fieldset">
         <legend class="form-headline order-form__legend">Тип</legend>
-        <label class="form-label form-label--radio">
+        <label class="form-label form-label--radio order-form__label" order-form__label>
           <input class="visually-hidden" type="radio" name="item-type" value="accessories" checked>
           <span class="form-label__text">Аксессуар для интерьера</span>
         </label>
-        <label class="form-label form-label--radio">
+        <label class="form-label form-label--radio order-form__label">
           <input class="visually-hidden" type="radio" name="item-type" value="toys">
           <span class="form-label__text">Детская игрушка</span>
         </label>
@@ -58,27 +58,27 @@
 
       <fieldset class="order-form__fieldset">
         <legend class="form-headline order-form__legend">Цвет</legend>
-        <label class="form-label form-label--checkbox">
+        <label class="form-label form-label--checkbox order-form__label">
           <input class="visually-hidden" type="checkbox" name="item-color" value="white" checked>
           <span class="form-label__text">Белый</span>
         </label>
-        <label class="form-label form-label--checkbox">
+        <label class="form-label form-label--checkbox order-form__label">
           <input class="visually-hidden" type="checkbox" name="item-color" value="grey" checked>
           <span class="form-label__text">Серый</span>
         </label>
-        <label class="form-label form-label--checkbox">
+        <label class="form-label form-label--checkbox order-form__label">
           <input class="visually-hidden" type="checkbox" name="item-color" value="tiffany">
           <span class="form-label__text">Тиффани</span>
         </label>
-        <label class="form-label form-label--checkbox">
+        <label class="form-label form-label--checkbox order-form__label">
           <input class="visually-hidden" type="checkbox" name="item-color" value="black">
           <span class="form-label__text">Черный</span>
         </label>
-        <label class="form-label form-label--checkbox">
+        <label class="form-label form-label--checkbox order-form__label">
           <input class="visually-hidden" type="checkbox" name="item-color" value="pink">
           <span class="form-label__text">Розовый</span>
         </label>
-        <label class="form-label form-label--checkbox">
+        <label class="form-label form-label--checkbox order-form__label">
           <input class="visually-hidden" type="checkbox" name="item-color" value="orange">
           <span class="form-label__text">Оранжевый</span>
         </label>
