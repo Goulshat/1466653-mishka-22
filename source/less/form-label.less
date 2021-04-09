@@ -44,7 +44,7 @@
       border-radius: 50%;
     }
 
-    .form-label__text::after {
+    input:checked + .form-label__text::after {
       left: 12px;
       width: 17px;
       height: 17px;
@@ -55,7 +55,7 @@
   }
 
   &--checkbox {
-    .form-label__text::after {
+    input:checked + .form-label__text::after {
       width: 23px;
       height: 16px;
       background: url("../img/icons/tick.svg") center no-repeat;
