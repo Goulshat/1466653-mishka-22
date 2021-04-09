@@ -1,0 +1,17 @@
+.form-headline {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  line-height: 17px;
+  color: @tiffany;
+  text-transform: uppercase;
+
+  &::after {
+    flex-grow: 1;
+    flex-shrink: 0;
+    content: "";
+    margin-left: 15px;
+    height: 1px;
+    background-color: @tiffany;
+  }
+}
