@@ -7,8 +7,10 @@
 </head>
 <body class="page__body">
   <header class="header page__header">
-    <a class="header__logo-link">
-      <img class="header__logo-img" src="img/logo/mishka-logo-mobile.svg" width="85" height="35" alt="Магазин товаров ручной работы Мишка">
+    <a class="header__logo-link" href="index.html">
+      <div class="header-link__container header-link__container--logo">
+        <img class="header__logo-img" src="img/logo/mishka-logo-mobile.svg" width="85" height="35" alt="Магазин товаров ручной работы Мишка">
+      </div>
     </a>
 
     <button class="header__nav-toggle header__nav-toggle--to-close" type="button">
@@ -18,24 +20,32 @@
     <nav class="header__nav"><!-- + класс .header__nav--closed-->
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <a class="header-link header__nav-link" href="#">Каталог товаров</a>
+          <a class="header-link header__nav-link" href="catalog.html">
+            <div class="header-link__container">Каталог товаров</div>
+          </a>
         </li>
         <li class="header__nav-item">
-          <a class="header-link header__nav-link" href="#">Вязание на заказ</a>
+          <a class="header-link header__nav-link" href="form.html">
+            <div class="header-link__container">Вязание на заказ</div>
+          </a>
         </li>
       </ul>
 
       <ul class="header__order-list">
         <li class="header__order-item">
           <a class="header-link header-link--search" href="#">
-            <img class="link-icon" src="img/icons/search-icon.svg" alt="" aria-hidden="true">
-            Поиск по сайту
+            <div class="header-link__container">
+              <img src="img/icons/search-icon.svg" alt="" aria-hidden="true">
+              Поиск по сайту
+            </div>
           </a>
         </li>
         <li class="header__order-item">
           <a class="header-link header-link--cart" href="#">
-            <img class="link-icon" src="img/icons/cart-icon.svg" alt="" aria-hidden="true">
-            Корзина:&nbsp;<span>пока пуста</span>
+            <div class="header-link__container">
+              <img src="img/icons/cart-icon.svg" alt="" aria-hidden="true">
+              Корзина:&nbsp;<span>пока пуста</span>
+            </div>
           </a>
         </li>
       </ul>

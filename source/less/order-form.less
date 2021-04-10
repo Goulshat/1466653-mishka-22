@@ -11,12 +11,18 @@
 
 .order-form__fieldset {
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
   border: none;
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  &:last-of-type {
+    margin-bottom: 17px;
   }
+  //@media min-width: @tablet-width;
+  // и паддинги сверху и снизу добавляются
+  //&:nth-of-type(2n) {
+  //  background-color: @grey-bg;
+  //}
 }
 
 .order-form__legend {
@@ -28,11 +34,14 @@
 }
 
 .order-form__required-text {
+  display: block;
+  vertical-align: middle;
+  margin-top: 0;
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 16px;
 }
 
 .order-form__button {
-  align-self: stretch;
+  width: 100%;
 }
