@@ -5,43 +5,46 @@
   <title>Mishka: заказать товар</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="order-page page__body ">
-  <header class="header">
+<body class="page__body ">
+  <header class="header page__header">
     <a class="header__logo-link">
-      <img class="header__logo-img" src="img/logo/mishka-logo-mobile.svg" alt="Магазин товаров ручной работы Мишка" width="85" height="35">
+      <img class="header__logo-img" src="img/logo/mishka-logo-mobile.svg" width="85" height="35" alt="Магазин товаров ручной работы Мишка">
     </a>
 
-    <nav class="header__nav header__nav--open">
-      <button class="header__nav-toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+    <button class="header__nav-toggle header__nav-toggle--to-close" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
 
+    <nav class="header__nav"><!-- + класс .header__nav--closed-->
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <a class="header__nav-link" href="#">Каталог товаров</a>
+          <a class="header-link header__nav-link" href="#">Каталог товаров</a>
         </li>
         <li class="header__nav-item">
-          <a class="header__nav-link" href="#">Вязание на заказ</a>
+          <a class="header-link header__nav-link" href="#">Вязание на заказ</a>
         </li>
       </ul>
 
       <ul class="header__order-list">
         <li class="header__order-item">
-          <a class="header__search-link" href="#">Поиск по сайту</a>
+          <a class="header-link header-link--search" href="#">
+            <img src="img/icons/search-icon.svg" alt="" aria-hidden="true">
+            Поиск по сайту
+          </a>
         </li>
         <li class="header__order-item">
-          <a class="header__cart-link" href="#">
-          Корзина:
-            <span>пока пуста</span>
+          <a class="header-link header-link--cart" href="#">
+            <img src="img/icons/cart-icon.svg" alt="" aria-hidden="true">
+            Корзина:&nbsp;<span>пока пуста</span>
           </a>
         </li>
       </ul>
     </nav>
   </header>
 
-  <main class="main-content">
+  <main class="order-page">
     <h1 class="main-title order-page__main-title">Вязание на заказ</h1>
-    <form class="order-form main-content__form" action="https://echo.htmlacademy.ru" method="POST">
+    <form class="order-form order-page__form" action="https://echo.htmlacademy.ru" method="POST">
       <p class="order-form__lead">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
       <fieldset class="order-form__fieldset">
@@ -85,7 +88,7 @@
       </fieldset>
 
       <fieldset class="order-form__fieldset">
-        <legend class="form-headline">ФИО</legend>
+        <legend class="form-headline order-form__legend">ФИО</legend>
         <label class="form-label">
           <span class="form-label__text">Имя:</span>
           <input class="form-label__input" type="text" name="first-name" placeholder="Введите ваше имя*" required>
@@ -96,24 +99,30 @@
         </label>
         <label class="form-label">
           <span class="form-label__text">Отчество:</span>
-          <input class="" type="text" name="middle-name" placeholder="Отчество если желаете*" >
+          <input class="form-label__input" type="text" name="middle-name" placeholder="Отчество если желаете*" >
         </label>
+      </fieldset>
+
+      <fieldset class="order-form__fieldset">
         <label class="form-label">
-          <span class="form-headline">Тел:</span>
+          <span class="form-headline">Тел</span>
           <input class="form-label__input" type="tel" name="order-tel" placeholder="+7 XXX XXX XX XX*" >
           <img src="img/icons/phone-icon.svg" width="25" height="24" alt="" aria-hidden="true">
         </label>
         <label class="form-label">
-          <span class="form-headline">E-mail:</span>
+          <span class="form-headline form-headline--email">E-mail</span>
           <input class="form-label__input" type="email" name="order-email" placeholder="Ваш Email*">
           <img src="img/icons/email-icon.svg" width="32" height="21" alt="" aria-hidden="true">
         </label>
+      </fieldset>
+
+      <fieldset class="order-form__fieldset">
         <label class="form-label">
           <span class="form-headline">Доп</span>
           <textarea class="form-label__textarea" name="extra-info" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </label>
       </fieldset>
-      <small class="order-form__required-text">* Поля обязательный для заполнения</small>
+      <small class="order-form__required-text">*Поля обязательны для заполнения</small>
       <button class="button order-form__button" type="submit">Отправить заказ</button>
     </form>
   </main>

@@ -1,0 +1,25 @@
+.form-headline {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  line-height: 17px;
+  color: @tiffany;
+  width: 100%;
+  text-transform: uppercase;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 0;
+    left: 60px;
+    height: 1px;
+    //border-bottom: 1px solid @tiffany;
+    background-color: @tiffany;
+  }
+
+  &--email::after {
+    left: 78px;
+  }
+}
