@@ -89,7 +89,7 @@
       </fieldset>
 
       <fieldset class="order-form__fieldset">
-        <legend class="form-headline">ФИО</legend>
+        <legend class="form-headline order-form__legend">ФИО</legend>
         <label class="form-label">
           <span class="form-label__text">Имя:</span>
           <input class="form-label__input" type="text" name="first-name" placeholder="Введите ваше имя*" required>
@@ -102,22 +102,28 @@
           <span class="form-label__text">Отчество:</span>
           <input class="form-label__input" type="text" name="middle-name" placeholder="Отчество если желаете*" >
         </label>
+      </fieldset>
+
+      <fieldset class="order-form__fieldset">
         <label class="form-label">
           <span class="form-headline">Тел</span>
           <input class="form-label__input" type="tel" name="order-tel" placeholder="+7 XXX XXX XX XX*" >
           <img src="img/icons/phone-icon.svg" width="25" height="24" alt="" aria-hidden="true">
         </label>
         <label class="form-label">
-          <span class="form-headline">E-mail</span>
+          <span class="form-headline form-headline--email">E-mail</span>
           <input class="form-label__input" type="email" name="order-email" placeholder="Ваш Email*">
           <img src="img/icons/email-icon.svg" width="32" height="21" alt="" aria-hidden="true">
         </label>
+      </fieldset>
+
+      <fieldset class="order-form__fieldset">
         <label class="form-label">
           <span class="form-headline">Доп</span>
           <textarea class="form-label__textarea" name="extra-info" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </label>
       </fieldset>
-      <small class="order-form__required-text">* Поля обязательны для заполнения</small>
+      <small class="order-form__required-text">*Поля обязательны для заполнения</small>
       <button class="button order-form__button" type="submit">Отправить заказ</button>
     </form>
   </main>
