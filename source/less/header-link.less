@@ -1,14 +1,12 @@
 .header-link {
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 79px;
-  padding: 22px 30px 22px 76px;
+  display: block;
+  vertical-align: middle;
 
   img {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
   }
 
   &:hover,
@@ -26,5 +24,20 @@
     img {
       fill-opacity: 0.3;
     }
+  }
+}
+
+.header-link__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 260px;
+  min-height: 79px;
+  padding: 22px 0 22px 46px;
+
+  &--logo {
+    padding-left: 0;
+    justify-content: center;
   }
 }
