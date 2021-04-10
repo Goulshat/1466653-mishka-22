@@ -1,20 +1,23 @@
 .contacts {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
-.contacts__title {
-  padding-left: 30px;
-  padding-right: 30px;
+.contacts__container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+//.contacts__title {}
 
 .contacts__list {
   display: grid;
   grid-template-columns: 70px 1fr;
   margin-top: 38px;
   margin-bottom: 60px;
-  padding-left: 30px;
-  padding-right: 30px;
   font-size: 14px;
   line-height: 30px;
 }
@@ -52,6 +55,8 @@
 }
 
 .contacts__map {
+  display: block;
+  vertical-align: top;
   margin-bottom: 42px;
 }
 

@@ -1,0 +1,76 @@
+//.categories {}
+
+.categories__container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.categories__link {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 24px;
+  color: @white;
+  background-color: @tiffany;
+
+  &--left,
+  &--right {
+    &::after {
+      position: absolute;
+      top: 30px;
+      right: 20%;
+      transform: translateX(50%);
+      display: block;
+      content: "";
+      background-position: 0 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.5;
+    }
+
+    &:hover::after {
+      opacity: 0.7;
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
+  }
+
+  &--left {
+    &:hover {
+      background-color: @tiffany-light;
+    }
+
+    &::after {
+      width: 40px;
+      height: 62px;
+      background-image: url("../img/icons/interior-category.svg");
+    }
+  }
+
+  &--right {
+    background-color: @tiffany-medium;
+
+    &:hover {
+      background-color: @tiffany-darker;
+    }
+
+    &::after {
+      width: 60px;
+      height: 60px;
+      background-image: url("../img/icons/toys-category.svg");
+    }
+  }
+}
+
+.categories__inner-container {
+  margin: 0 auto;
+  width: 260px;
+  min-height: 103px;
+  padding: 24px 100px 30px 0;
+}
