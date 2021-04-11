@@ -2,18 +2,11 @@
   display: block;
   vertical-align: middle;
 
-  img {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-  }
-
   &:hover,
   &:focus {
     color: @text-grey-hover;
 
-    img {
+    .header-link__icon {
       fill: @tiffany;
     }
   }
@@ -21,10 +14,32 @@
   &:active {
     color: @text-grey-light;
 
-    img {
+    .header-link__icon {
       fill-opacity: 0.3;
     }
   }
+}
+
+.header-link__logo-img {
+  display: block;
+  width: 85px;
+  height: 35px;
+
+  &:hover,
+  &:focus {
+    fill-opacity: 0.6;
+  }
+
+  &:active {
+    fill-opacity: 0.3;
+  }
+}
+
+.header-link__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
 }
 
 .header-link__container {
