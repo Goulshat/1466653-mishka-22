@@ -9,6 +9,11 @@
     grid-template-columns: 320px 348px;
     grid-template-rows: auto auto;
   }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: 400px 1fr 348px;
+    grid-template-rows: min-content auto;
+  }
 }
 
 /* Кнопка открыть-закрыть меню */
@@ -24,6 +29,19 @@
 
   &--to-close {
     background-image: url("../img/icons/menu-close.svg");
+  }
+
+  @media (min-width: @tablet) {
+    display: none;
+  }
+}
+//Логотип
+.header__logo-link {
+  @media (min-width: @desktop) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -54,9 +72,20 @@
     justify-content: space-between;
     font-size: 15px;
   }
+
+  @media (min-width: @desktop) {
+    grid-column: ~"1 / 2";
+    grid-row: ~"1 / -1";
+    .flex-container;
+    justify-content: space-between;
+    font-size: 17px;
+  }
 }
 
 .header__nav-item {
+  .flex-container;
+  align-items: center;
+
   @media (min-width: @tablet) {
     width: 150px;
 
@@ -64,19 +93,38 @@
       margin-right: 5px;
     }
   }
+
+  @media (min-width: @desktop) {
+    width: 185px;
+  }
+
+  &--desktop-only {
+    display: none;
+    font-size: 15px;
+
+    @media (min-width: @desktop) {
+      .flex-container;
+    }
+  }
 }
 
 .header__order-list {
   @media (min-width: @tablet) {
     .flex-container;
-    flex-wrap: nowrap;
+  }
+
+  @media (min-width: @desktop) {
+    grid-column: ~"-2 / -1";
   }
 }
 
 .header__order-item {
   @media (min-width: @tablet) {
-    min-height: 89px;
     border-left: 1px solid @shadow-color;
+  }
+
+  @media (min-width: @tablet) {
+    min-height: 89px;
   }
 }
 
@@ -93,5 +141,10 @@
     .flex-container;
     align-items: center;
     justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop) {
+    grid-column: ~"-2 / -1";
+    grid-row: ~"-2 / -1";
   }
 }

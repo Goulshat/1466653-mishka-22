@@ -39,6 +39,7 @@
     margin: 0;
     padding-left: 0;
     width: 100%;
+    min-height: 89px;
   }
 
   &--logo {
@@ -52,7 +53,6 @@
 
   &--cart {
     @media (min-width: @tablet) {
-      height: 89px;
       padding: 30px 0 30px 80px;
     }
   }
@@ -60,17 +60,16 @@
   &--search {
     @media (min-width: @tablet) {
       width: 82px;
-      height: 89px;
     }
   }
 }
-
+//текст в ссылке Поиск
 .header-link__search-text {
   @media (min-width: @tablet) {
     .visually-hidden;
   }
 }
-
+//интерактивные состояния и логотипа в шапке: смена прозрачности и самого изображения
 .header-link__logo-img {
   width: 85px;
   height: 35px;
@@ -123,4 +122,4 @@
   @media (min-width: @tablet) {
     left: 32px;
   }
-}
+} //интерактивные состояния иконки в .header-link
