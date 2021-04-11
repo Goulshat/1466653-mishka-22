@@ -1,14 +1,12 @@
 .header {
   position: relative;
-  color: @black;
-  font-weight: 700;
 }
-
+/*
 .header__nav {
   &--closed {
     display: none;
   }
-}
+}*/
 
 /* Кнопка открыть-закрыть меню */
 .header__nav-toggle {
@@ -29,6 +27,10 @@
 .header__nav-list,
 .header__order-list {
   .clear-list;
+
+  &--closed {
+    display: none;
+  }
 }
 
 .header__nav-item,
