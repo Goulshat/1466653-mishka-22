@@ -14,4 +14,17 @@
   color: @text-grey;
   text-align: left;
   background-color: @white;
+
+  @media (min-width: @tablet) {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+  }
+}
+
+.page__header {
+  margin-bottom: -79px;
+}
+
+.page__main {
+  border-top: 1px solid @shadow-color;
 }
