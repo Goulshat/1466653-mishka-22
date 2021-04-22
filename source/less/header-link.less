@@ -1,6 +1,8 @@
 .header-link {
-  display: block;
-  vertical-align: middle;
+  .flex-container;
+  align-items: center;
+  color: @black;
+  font-weight: 700;
 
   &:hover,
   &:focus {
@@ -18,10 +20,15 @@
       fill-opacity: 0.3;
     }
   }
+
+  @media (min-width: @tablet) {
+    box-shadow: none;
+  }
 }
 
+//интерактивные состояния и логотипа в шапке:
+//смена прозрачности
 .header-link__logo-img {
-  display: block;
   width: 85px;
   height: 35px;
 
@@ -33,26 +40,53 @@
   &:active {
     fill-opacity: 0.3;
   }
+
+  &--mobile {
+    @media (min-width: @tablet) {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @media (min-width: @tablet) {
+      display: block;
+      vertical-align: top;
+      width: 113px;
+      height: 46px;
+    }
+
+    @media (min-width: @desktop) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: @desktop) {
+      display: block;
+      width: 149px;
+      height: 72px;
+    }
+  }
 }
 
 .header-link__icon {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   left: 0;
+  transform: translateY(-50%);
+
+  @media (min-width: @tablet) {
+    left: 32px;
+  }
 }
 
-.header-link__container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  width: 260px;
-  min-height: 79px;
-  padding: 22px 0 22px 46px;
-
-  &--logo {
-    padding-left: 0;
-    justify-content: center;
+//текст в ссылке Поиск
+.header-link__search-text {
+  @media (min-width: @tablet) {
+    .visually-hidden;
   }
 }

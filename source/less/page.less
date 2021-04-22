@@ -14,4 +14,21 @@
   color: @text-grey;
   text-align: left;
   background-color: @white;
+
+  @media (min-width: @tablet) {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+  }
+}
+
+.page__header {
+  @media (min-width: @tablet) {
+    margin-bottom: -@header-tablet-height;
+  }
+}
+
+.page__main {
+  @media (min-width: @tablet) {
+    border-top: 1px solid @shadow-color;
+  }
 }

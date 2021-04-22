@@ -1,5 +1,14 @@
 .main-content__hero {
   margin: 0;
   min-height: 283px;
-  background: @hero-bg url("../img/hero-bg@1x.jpg") center/contain no-repeat;
+  background-color: @hero-bg;
+  background-image: url("../img/hero-bg@1x.jpg");
+  background-position: center 0;
+  background-size: auto 120%;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet) {
+    min-height: 626px;
+    padding: 154px 90px;
+  }
 }

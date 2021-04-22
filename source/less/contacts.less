@@ -1,29 +1,89 @@
 .contacts {
-  padding-top: 30px;
-  padding-bottom: 40px;
+  //padding-bottom: 40px;
 }
 
 .contacts__container {
+  position: relative;
   margin: 0;
-  padding: 0;
+  padding: 30px 0 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: url("../img/zigzag-line-template.svg") left top repeat-x;
+
+  @media (min-width: @tablet) {
+    padding-top: 70px;
+    background-size: auto 17px;
+  }
+
+  @media (min-width: @desktop) {
+    .container;
+    padding: 150px 15px 105px 175px;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 650px;
+    background-size: auto 23px;
+  }
 }
 
-//.contacts__title {}
+.contacts__inner-container {
+  .container;
+
+  @media (min-width: @desktop) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.contacts__title {
+  position: relative;
+
+  @media (min-width: @tablet) {
+    &::after {
+      position: absolute;
+      top: -10px;
+      right: 0;
+      content: "";
+      width: 47px;
+      height: 81px;
+      background: url("../img/icons/flag.svg") 0 0 no-repeat;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    &::after {
+      left: -100px;
+    }
+  }
+}
 
 .contacts__list {
   display: grid;
   grid-template-columns: 70px 1fr;
+  column-gap: 5px;
   margin-top: 38px;
   margin-bottom: 60px;
   font-size: 14px;
   line-height: 30px;
+
+  @media (min-width: @tablet) {
+    grid-template-columns: 82px 242px 82px 242px;
+    column-gap: 10px;
+    font-size: 17px;
+  }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: 70px 250px;
+  }
 }
 
 .contacts__description {
   margin: 0;
+
+  @media (min-width: @desktop) {
+    margin-bottom: 25px;
+  }
 }
 
 .contacts__email-link {
@@ -58,8 +118,28 @@
   display: block;
   vertical-align: top;
   margin-bottom: 42px;
+  width: 320px;
+  height: 454px;
+  object-fit: cover;
+
+  @media (min-width: @tablet) {
+    width: 100%;
+    height: 457px;
+  }
+
+  @media (min-width: @desktop) {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    //float: right;
+    width: 527px;
+  }
 }
 
 .contacts__button {
   margin: 0 auto;
+
+  @media (min-width: @desktop) {
+    margin: 0;
+  }
 }

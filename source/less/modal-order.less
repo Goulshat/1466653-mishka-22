@@ -5,6 +5,11 @@
   text-align: center;
   border: 1px solid @modal-border;
   box-shadow: 0 5px 10px @modal-shadow;
+
+  @media (min-width: @tablet) {
+    padding: 50px 108px 40px;
+    width: 566px;
+  }
 }
 
 .modal-order__title {
@@ -19,6 +24,10 @@
 .modal-order__text {
   font-size: 15px;
   line-height: 30px;
+
+  @media (min-width: @tablet) {
+    font-size: 17px;
+  }
 }
 
 .modal-order__size {
@@ -26,6 +35,13 @@
   min-width: 82px;
   padding: 18px;
   border: 2px solid @block-shadow;
+
+  @media (min-width: @tablet) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-width: 112px;
+    min-height: 52px;
+  }
 
   &:hover,
   &:focus {

@@ -2,31 +2,44 @@
 <html lang="ru" class="page">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="header page__header">
-      <a class="header-link">
-        <div class="header-link__container header-link__container--logo">
-          <img class="header-link__logo-img" src="img/logo/mishka-logo-mobile.svg" width="85" height="35" alt="Магазин товаров ручной работы Мишка">
-        </div>
-      </a>
+      <nav class="header__nav">
+        <a class="header-link header__logo-link">
+          <div class="header__link-container header__link-container--logo">
+            <img class="header-link__logo-img header-link__logo-img--mobile" src="img/logo/mishka-logo-mobile.svg" width="85" height="35" alt="Магазин товаров ручной работы Мишка">
+            <img class="header-link__logo-img header-link__logo-img--tablet" src="img/logo/mishka-logo-tablet.svg" width="113" height="46" alt="Магазин товаров ручной работы Мишка">
+            <img class="header-link__logo-img header-link__logo-img--desktop" src="img/logo/mishka-logo-desktop.svg" width="149" height="72" alt="Магазин товаров ручной работы Мишка">
+          </div>
+        </a>
 
-      <button class="header__nav-toggle header__nav-toggle--to-close" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+        <button class="header__nav-toggle header__nav-toggle--to-close" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
 
-      <nav class="header__nav"><!-- + класс .header__nav--closed-->
-        <ul class="header__nav-list">
+        <ul class="header__nav-list"><!-- + класс .header__nav-list--closed-->
           <li class="header__nav-item">
-            <a class="header-link header__nav-link" href="catalog.html"><!--пока класс header__nav-link лишний, свойств на него не заведено. Позже подчистить-->
-              <div class="header-link__container">Каталог товаров</div>
+            <a class="header-link" href="catalog.html">
+              <div class="header__link-container">Каталог товаров</div>
             </a>
           </li>
           <li class="header__nav-item">
-            <a class="header-link header__nav-link" href="form.html">
-              <div class="header-link__container">Вязание на заказ</div>
+            <a class="header-link" href="form.html">
+              <div class="header__link-container">Вязание на заказ</div>
+            </a>
+          </li>
+          <li class="header__nav-item header__nav-item--desktop-only">
+            <a class="header-link" href="#">
+              <div class="header__link-container">Новые поступления</div>
+            </a>
+          </li>
+          <li class="header__nav-item header__nav-item--desktop-only">
+            <a class="header-link" href="#">
+              <div class="header__link-container">Распродажа</div>
             </a>
           </li>
         </ul>
@@ -34,19 +47,22 @@
         <ul class="header__order-list">
           <li class="header__order-item">
             <a class="header-link header-link--search" href="#">
-              <div class="header-link__container">
+              <div class="header__link-container header__link-container--search">
                 <img class="header-link__icon" src="img/icons/search-icon.svg" alt="" aria-hidden="true">
-                Поиск по сайту
+                <span class="header-link__search-text">Поиск по сайту</span>
               </div>
             </a>
           </li>
           <li class="header__order-item">
             <a class="header-link header-link--cart" href="#">
-              <div class="header-link__container">
+              <div class="header__link-container header__link-container--cart">
                 <img class="header-link__icon" src="img/icons/cart-icon.svg" alt="" aria-hidden="true">
-                Корзина:&nbsp;<span>пока пуста</span>
+                Корзина:<span>пока пуста</span>
               </div>
             </a>
+          </li>
+          <li class="header__order-item">
+            <p class="header__link-container header__nav-delivery">Бесплатная доставка по России</p>
           </li>
         </ul>
       </nav>
@@ -70,9 +86,12 @@
       </section>
 
       <section class="promo main-content__promo">
-        <div class="container">
-          <h2 class="section-title promo__product-title">Вязаные корзинки</h2>
-          <b class="promo__heading">Товар недели</b>
+        <div class="container promo__container">
+          <div class="promo__title-wrap">
+            <h2 class="section-title promo__product-title">Вязаные корзинки</h2>
+            <b class="promo__heading">Товар недели</b>
+          </div>
+
           <p class="promo__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
 
           <dl class="properties promo__properties-list">
@@ -91,30 +110,32 @@
           </dl>
 
           <img class="promo__image" src="img/products/triple-set-mobile@1x.jpg" width="360" height="315" alt="Вязаные корзинки в трех размерах в двух расцветках: серый с Тиффани, нежно-розовый с белым">
-          <p class="promo__price">
-            Цена:
-            <span>990 руб.</span>
-          </p>
-          <a class="button button--add-to-cart promo__button" href="#">Заказать</a>
+          <div class="promo__price-wrap">
+            <p class="promo__price">
+              Цена:
+              <span>990 руб.</span>
+            </p>
+            <a class="button button--add-to-cart promo__button" href="#">Заказать</a>
+          </div>
         </div>
       </section>
 
       <section class="advantages">
-        <div class="container">
+        <div class="container advantages__container">
           <h2 class="section-title advantages__title" aria-hidden="true">Коротко о нас:</h2>
           <ul class="advantages__list">
-            <li class="advantages__item advantages__item--pure">Экологически чистые материалы</li>
-            <li class="advantages__item advantages__item--nordic">Скандинавский стиль по&nbsp;российской цене</li>
+            <li class="advantages__item advantages__item--pure">Экологически чистые&nbsp;материалы</li>
+            <li class="advantages__item advantages__item--nordic">Скандинавский стиль по&nbsp;российской&nbsp;цене</li>
             <li class="advantages__item advantages__item--likes">Увеличивает лайки на&nbsp;фотографиях</li>
-            <li class="advantages__item advantages__item--cute">Связано вручную с&nbsp;любовью и умилением</li>
+            <li class="advantages__item advantages__item--cute">Связано вручную с&nbsp;любовью&nbsp;и&nbsp;умилением</li>
             <li class="advantages__item advantages__item--homies">Поддержка отечественного производителя</li>
-            <li class="advantages__item advantages__item--present">Поставляется в&nbsp;подарочной упаковке</li>
+            <li class="advantages__item advantages__item--present">Поставляется в&nbsp;подарочной&nbsp;упаковке</li>
           </ul>
         </div>
       </section>
 
       <section class="reviews">
-        <div class="container">
+        <div class="container reviews__container">
           <h2 class="section-title reviews__title">Отзывы</h2>
           <blockquote class="reviews__item">
             <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
@@ -133,7 +154,7 @@
 
       <section class="contacts">
         <div class="contacts__container">
-          <div class="container">
+          <div class="contacts__inner-container">
             <h2 class="section-title contacts__title">Контакты</h2>
             <dl class="contacts__list">
               <dt class="contacts__item">e-mail:</dt>
@@ -141,19 +162,19 @@
                 <a class="contacts__email-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
               </dd>
               <dt class="contacts__item">адрес:</dt>
-              <dd class="contacts__description">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</dd>
+              <dd class="contacts__description">г.&nbsp;Санкт-Петербург ул.&nbsp;Большая&nbsp;Конюшенная д.&nbsp;19/8, офис&nbsp;101</dd>
             </dl>
           </div>
 
-          <img class="contacts__map" src="img/map-mobile@1x.png" alt="Отметка на карте магазина Мишка" width="320" height="454">
+          <img class="contacts__map" src="img/map@1x.png" alt="Отметка на карте магазина Мишка" width="320" height="454">
           <button class="button button--contact-us contacts__button">Напишите нам</button>
         </div>
       </section>
     </main>
 
     <footer class="footer page__footer">
-      <div class="container">
-        <a class="footer__logo-link footer__logo-link--hidden">
+      <div class="container footer__container">
+        <a class="footer__logo-link">
           <img class="footer__logo-img" src="img/logo/mishka-logo-footer.svg" width="101" height="34" alt="Логотип магазина Mishka">
         </a>
 
