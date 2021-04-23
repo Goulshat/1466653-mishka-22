@@ -8,3 +8,19 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.white-zigzag() {
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    background: url("../img/zigzag-line.svg") left bottom repeat-x;
+
+    @media (min-width: @desktop) {
+      background-size: auto 34px;
+    }
+  }
+}

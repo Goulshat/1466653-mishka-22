@@ -3,22 +3,14 @@
   background-color: @hero-bg;
 
   @media (min-width: @tablet) {
-    &::after {
-      position: absolute;
-      content: "";
-      bottom: -10px;
-      left: 0;
-      width: 100%;
-      height: 35px;
-      background: url("../img/zigzag-line.svg") left bottom repeat-x;
-    }
+    .white-zigzag;
   }
 
-  @media (min-width: @desktop) {
-    &::after {
-      background-size: auto 34px;
-    }
-  }
+  // @media (min-width: @desktop) {
+  //   &::after {
+  //     background-size: auto 34px;
+  //   }
+  // }
 }
 
 .categories__container {
