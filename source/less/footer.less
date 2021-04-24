@@ -30,9 +30,10 @@
 
 .footer__copyright {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 0;
+  padding: 0 32px 0 40px;
   min-height: 80px;
   font-weight: 700;
   font-size: 19px;
@@ -42,22 +43,24 @@
 
 .footer__copyright-link {
   .flex-container;
-  margin-left: 27px;
+  //margin-left: 27px;
   align-items: center;
-  min-height: 34px;
-
-  &:hover {
-    fill: @tiffany-darker;
-  }
-
-  &:active {
-    fill: @tiffany-darker;
-    stroke-opacity: 0.3;
-  }
+  //width: 100%;
+  height: 38px;
 
   img {
     display: block;
-    width: 24px;
-    height: 34px;
+    vertical-align: top;
+    width: auto;
+    height: 40px;
+  }
+
+  &:hover img {
+    fill: @tiffany-darker;
+  }
+
+  &:active img {
+    fill: @tiffany-darker;
+    stroke-opacity: 0.3;
   }
 }

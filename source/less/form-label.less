@@ -20,7 +20,8 @@
   &--checkbox {
     padding-left: 60px;
 
-    @{b}__text::before { /* коробочка по-умолчанию */
+    @{b}__text::before {
+      /* коробочка по-умолчанию */
       position: absolute;
       top: 0;
       left: 0;
@@ -73,7 +74,7 @@
     }
 
     input:checked + @{b}__text::after {
-      /* вместо галочки - кружочек, свое положение */
+      /* вместо галочки - кружочек, и свое положение */
       top: 12px;
       left: 12px;
       width: 17px;
@@ -91,7 +92,7 @@
     }
   }
 
-  img {
+  img { /* иконки телефона и e-mail */
     position: absolute;
     top: 60%;
     right: 10px;
@@ -137,7 +138,7 @@
   box-shadow: inset 0 -2px 0 @black;
 
   &::placeholder {
-    color: @text-grey-light;
+    color: @black-opacity-30;
     font-size: 17px;
     line-height: 17px;
   }

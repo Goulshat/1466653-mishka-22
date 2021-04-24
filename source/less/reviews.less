@@ -1,21 +1,18 @@
 .reviews {
-  padding: 30px 30px 45px 30px;
-  //background: url("../img/zigzag-line-template.svg") left bottom repeat-x;
+  padding-bottom: 45px;
 
   @media (min-width: @tablet) {
     padding: 0;
-    background:
-      //url("../img/zigzag-line-template.svg") left bottom / auto 17px repeat-x,
-      url("../img/review-background@1x.jpg") left top / 350px auto no-repeat;
+    background: url("../img/review-background@1x.jpg") left top / 350px auto no-repeat;
   }
 
   @media (min-width: @desktop) {
-    //padding-bottom: 40px;
     background: none;
   }
 }
 
 .reviews__container {
+  .container;
   position: relative;
 
   @media (min-width: @tablet) {
@@ -26,15 +23,17 @@
   @media (min-width: @desktop) {
     padding-left: 175px;
     padding-bottom: 130px;
-    background:
-      //url("../img/zigzag-line-template.svg") left bottom / auto 23px repeat-x,
-      url("../img/review-background@1x.jpg") left top / 350px auto no-repeat;
+    background: url("../img/review-background@1x.jpg") left top / 350px auto no-repeat;
   }
+}
+
+.reviews__title {
+  margin-bottom: 13px;
 }
 
 .reviews__item {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 
   @media (min-width: @tablet) {
     margin-top: 40px;
@@ -43,6 +42,8 @@
 }
 
 .reviews__text {
+  margin: 0;
+  margin-bottom: 35px;
   font-size: 15px;
   line-height: 30px;
 
@@ -56,6 +57,7 @@
 
 .reviews__author-name {
   display: block;
+  margin-bottom: 3px;
   vertical-align: middle;
   font-style: normal;
   font-weight: 700;

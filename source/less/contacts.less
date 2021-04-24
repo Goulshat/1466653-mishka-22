@@ -5,7 +5,7 @@
 .contacts__container {
   position: relative;
   margin: 0;
-  padding: 30px 0 40px;
+  padding: 44px 0 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +28,7 @@
 
 .contacts__inner-container {
   .container;
+  margin-bottom: 61px;
 
   @media (min-width: @desktop) {
     width: 100%;
@@ -39,7 +40,13 @@
 .contacts__title {
   position: relative;
 
+  @media (max-width: @tablet - 1) {
+    font-size: 18px;
+  }
+
   @media (min-width: @tablet) {
+    font-size: 43px;
+
     &::after {
       position: absolute;
       top: -10px;
@@ -60,10 +67,10 @@
 
 .contacts__list {
   display: grid;
-  grid-template-columns: 70px 1fr;
+  grid-template-columns: 72px 1fr;
   column-gap: 5px;
-  margin-top: 38px;
-  margin-bottom: 60px;
+  margin: 0;
+  margin-top: 28px;
   font-size: 14px;
   line-height: 30px;
 
@@ -74,12 +81,21 @@
   }
 
   @media (min-width: @desktop) {
-    grid-template-columns: 70px 250px;
+    grid-template-columns: 72px 250px;
   }
 }
 
 .contacts__description {
   margin: 0;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet) {
+    margin-bottom: 0;
+  }
 
   @media (min-width: @desktop) {
     margin-bottom: 25px;
@@ -118,7 +134,8 @@
   display: block;
   vertical-align: top;
   margin-bottom: 42px;
-  width: 320px;
+  width: 100%;
+  min-width: 320px;
   height: 454px;
   object-fit: cover;
 
@@ -131,13 +148,13 @@
     position: absolute;
     top: 90px;
     right: 0;
-    //float: right;
     width: 527px;
   }
 }
 
 .contacts__button {
   margin: 0 auto;
+  min-width: 260px;
 
   @media (min-width: @desktop) {
     margin: 0;

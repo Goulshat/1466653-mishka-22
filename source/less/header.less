@@ -7,6 +7,7 @@
 
   @media (min-width: @tablet) {
     .container;
+    padding: 0;
     grid-template-columns: 320px 348px;
     grid-template-rows: min-content min-content;
   }
@@ -68,7 +69,6 @@
     inset 0 1px @block-shadow;
 
   @media (min-width: @tablet) {
-    position: relative;
     z-index: 5;
     box-shadow: none;
     min-height: @header-tablet-height;
@@ -117,8 +117,8 @@
 
     &:nth-child(2) {
       //margin-right: auto;
-      border-left: 1px solid @shadow-color;
       flex-grow: 1;
+      border-left: 1px solid @black-opacity-10;
     }
   }
 
@@ -150,14 +150,22 @@
 //Меню справа
 .header__order-item {
   align-items: center;
-  min-height: @header-tablet-height;
 
   @media (min-width: @tablet) {
     align-items: flex-start;
+    min-height: @header-tablet-height;
 
     &:nth-child(-n+2) {
       align-items: center;
-      border-left: 1px solid @shadow-color;
+      border-left: 1px solid @black-opacity-10;
+    }
+  }
+
+  &--delivery {
+    display: none;
+
+    @media (min-width: @tablet) {
+      display: flex;
     }
   }
 }
@@ -169,7 +177,7 @@
   align-items: center;
   width: 260px;
   min-height: 79px;
-  padding: 10px 0 10px 46px;
+  padding: 15px 0 15px 46px;
 
   @media (min-width: @tablet) {
     margin: 0;
@@ -221,12 +229,11 @@
 }
 
 .header__nav-delivery {
-  display: none;
-
   @media (min-width: @tablet) {
     .flex-container;
     margin: 0;
-    padding-top: 15px;
+    padding: 0;
+    padding-top: 20px;
     justify-content: flex-end;
     align-items: flex-start;
     font-size: 15px;
