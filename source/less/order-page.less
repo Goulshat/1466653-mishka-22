@@ -3,7 +3,25 @@
 }
 
 .order-page__main-title {
-  margin-top: 0;
-  margin-bottom: 17px;
+  position: relative;
+
+  @media (min-width: @tablet) {
+    .white-zigzag;
+  }
+}
+
+.order-page__title-container {
   min-height: 177px;
+  padding: 70px 0;
+
+  @media (min-width: @tablet) {
+    padding: 100px 130px 75px;
+    min-height: 238px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 175px;
+    padding-right: 175px;
+    min-height: 272px;
+  }
 }

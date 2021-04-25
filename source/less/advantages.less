@@ -1,5 +1,5 @@
 .advantages {
-  padding: 30px;
+  //padding: 30px 0;
 
   @media (min-width: @tablet) {
     padding: 0;
@@ -7,6 +7,9 @@
 }
 
 .advantages__container {
+  .container;
+  padding: 31px 30px 29px 30px;
+
   @media (min-width: @tablet) {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -19,7 +22,7 @@
 }
 
 .advantages__title {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .advantages__list {
@@ -37,7 +40,8 @@
 }
 
 .advantages__item {
-  padding: 50px 0 30px;
+  padding: 55px 0 20px;
+  margin-bottom: 8px;
   background-position: 0 0;
   //background-size:
   background-repeat: no-repeat;
@@ -49,6 +53,7 @@
 
   &--pure {
     background-image: url("../img/icons/pure.svg");
+    background-position: 8px 0;
   }
 
   &--nordic {
@@ -57,17 +62,21 @@
 
   &--likes {
     background-image: url("../img/icons/heart-likes.svg");
+    background-position: 7px 6px;
   }
 
   &--cute {
     background-image: url("../img/icons/yarn.svg");
+    background-position: 3px 3px;
   }
 
   &--homies {
     background-image: url("../img/icons/rocket.svg");
+    background-position: -5px 4px;
   }
 
   &--present {
     background-image: url("../img/icons/present.svg");
+    background-position: 3px 2px;
   }
 }

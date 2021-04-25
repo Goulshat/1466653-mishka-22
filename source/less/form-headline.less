@@ -15,11 +15,16 @@
     right: 0;
     left: 60px;
     height: 1px;
-    //border-bottom: 1px solid @tiffany;
     background-color: @tiffany;
   }
 
   &--email::after {
     left: 78px;
+  }
+
+  @media (min-width: @tablet) {
+    &::after {
+      display: none;
+    }
   }
 }

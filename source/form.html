@@ -2,31 +2,44 @@
 <html lang="ru" class="page">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mishka: заказать товар</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body ">
   <header class="header page__header">
-    <a class="header__logo-link" href="index.html">
-      <div class="header-link__container header-link__container--logo">
-        <img class="header__logo-img" src="img/logo/mishka-logo-mobile.svg" width="85" height="35" alt="Магазин товаров ручной работы Мишка">
-      </div>
-    </a>
+    <nav class="header__nav">
+      <a class="header-link header__logo-link" href="index.html">
+        <div class="header__link-container header__link-container--logo">
+          <img class="header-link__logo-img header-link__logo-img--mobile" src="img/logo/mishka-logo-mobile.svg" width="85" height="35" alt="Магазин товаров ручной работы Мишка">
+          <img class="header-link__logo-img header-link__logo-img--tablet" src="img/logo/mishka-logo-tablet.svg" width="113" height="46" alt="Магазин товаров ручной работы Мишка">
+          <img class="header-link__logo-img header-link__logo-img--desktop" src="img/logo/mishka-logo-desktop.svg" width="149" height="72" alt="Магазин товаров ручной работы Мишка">
+        </div>
+      </a>
 
-    <button class="header__nav-toggle header__nav-toggle--to-close" type="button">
-      <span class="visually-hidden">Открыть меню</span>
-    </button>
+      <button class="header__nav-toggle header__nav-toggle--to-close" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
 
-    <nav class="header__nav"><!-- + класс .header__nav--closed-->
-      <ul class="header__nav-list">
+      <ul class="header__nav-list"><!-- + класс .header__nav-list--closed-->
         <li class="header__nav-item">
-          <a class="header-link header__nav-link" href="catalog.html">
-            <div class="header-link__container">Каталог товаров</div>
+          <a class="header-link" href="catalog.html">
+            <div class="header__link-container">Каталог товаров</div>
           </a>
         </li>
         <li class="header__nav-item">
-          <a class="header-link header__nav-link" href="form.html">
-            <div class="header-link__container">Вязание на заказ</div>
+          <a class="header-link" href="form.html">
+            <div class="header__link-container">Вязание на заказ</div>
+          </a>
+        </li>
+        <li class="header__nav-item header__nav-item--desktop-only">
+          <a class="header-link" href="#">
+            <div class="header__link-container">Новые поступления</div>
+          </a>
+        </li>
+        <li class="header__nav-item header__nav-item--desktop-only">
+          <a class="header-link" href="#">
+            <div class="header__link-container">Распродажа</div>
           </a>
         </li>
       </ul>
@@ -34,19 +47,22 @@
       <ul class="header__order-list">
         <li class="header__order-item">
           <a class="header-link header-link--search" href="#">
-            <div class="header-link__container">
-              <img src="img/icons/search-icon.svg" alt="" aria-hidden="true">
-              Поиск по сайту
+            <div class="header__link-container header__link-container--search">
+              <img class="header-link__icon" src="img/icons/search-icon.svg" alt="" aria-hidden="true">
+              <span class="header-link__search-text">Поиск по сайту</span>
             </div>
           </a>
         </li>
         <li class="header__order-item">
           <a class="header-link header-link--cart" href="#">
-            <div class="header-link__container">
-              <img src="img/icons/cart-icon.svg" alt="" aria-hidden="true">
-              Корзина:&nbsp;<span>пока пуста</span>
+            <div class="header__link-container header__link-container--cart">
+              <img class="header-link__icon" src="img/icons/cart-icon.svg" alt="" aria-hidden="true">
+              Корзина:<span>пока пуста</span>
             </div>
           </a>
+        </li>
+        <li class="header__order-item header__order-item--delivery">
+          <p class="header__link-container header__nav-delivery">Бесплатная доставка по России</p>
         </li>
       </ul>
     </nav>
@@ -54,7 +70,7 @@
 
   <main class="order-page">
     <h1 class="main-title order-page__main-title">
-      <div class="container">Вязание на заказ</div>
+      <div class="container order-page__title-container">Вязание на заказ</div>
     </h1>
     <form class="order-form order-page__form" action="https://echo.htmlacademy.ru" method="POST">
       <div class="container">
@@ -62,7 +78,7 @@
       </div>
 
       <fieldset class="order-form__fieldset">
-        <div class="container">
+        <div class="container order-form__fieldset-container">
           <legend class="form-headline order-form__legend">Тип</legend>
           <label class="form-label form-label--radio order-form__label" order-form__label>
             <input class="visually-hidden" type="radio" name="item-type" value="accessories" checked>
@@ -76,7 +92,7 @@
       </fieldset>
 
       <fieldset class="order-form__fieldset">
-        <div class="container">
+        <div class="container order-form__fieldset-container order-form__fieldset-container--for-checkboxes">
           <legend class="form-headline order-form__legend">Цвет</legend>
           <label class="form-label form-label--checkbox order-form__label">
             <input class="visually-hidden" type="checkbox" name="item-color" value="white" checked>
@@ -106,7 +122,7 @@
       </fieldset>
 
       <fieldset class="order-form__fieldset">
-        <div class="container">
+        <div class="container order-form__fieldset-container">
           <legend class="form-headline order-form__legend">ФИО</legend>
           <label class="form-label">
             <span class="form-label__text">Имя:</span>
@@ -124,14 +140,14 @@
       </fieldset>
 
       <fieldset class="order-form__fieldset">
-        <div class="container">
+        <div class="container order-form__fieldset-container">
           <label class="form-label">
-            <span class="form-headline">Тел</span>
+            <span class="form-headline order-form__legend order-form__legend--in-label">Тел</span>
             <input class="form-label__input" type="tel" name="order-tel" placeholder="+7 XXX XXX XX XX*" >
             <img src="img/icons/phone-icon.svg" width="25" height="24" alt="" aria-hidden="true">
           </label>
           <label class="form-label">
-            <span class="form-headline form-headline--email">E-mail</span>
+            <span class="form-headline form-headline--email order-form__legend order-form__legend--in-label">E-mail</span>
             <input class="form-label__input" type="email" name="order-email" placeholder="Ваш Email*">
             <img src="img/icons/email-icon.svg" width="32" height="21" alt="" aria-hidden="true">
           </label>
@@ -139,53 +155,53 @@
       </fieldset>
 
       <fieldset class="order-form__fieldset">
-        <div class="container">
-          <label class="form-label">
-            <span class="form-headline">Доп</span>
-            <textarea class="form-label__textarea" name="extra-info" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          </label>
+        <div class="container order-form__fieldset-container">
+          <legend class="form-headline order-form__legend">Доп</legend>
+          <textarea class="order-form__textarea" name="extra-info" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </div>
       </fieldset>
 
-      <div class="container">
+      <div class="container order-form__button-container">
         <small class="order-form__required-text">*Поля обязательны для заполнения</small>
         <button class="button order-form__button" type="submit">Отправить заказ</button>
       </div>
     </form>
   </main>
 
-  <footer class="footer">
-    <a class="footer__logo-link footer__logo-link--hidden">
-      <img class="footer__logo-img" src="img/logo/mishka-logo-footer.svg" width="101" height="34" alt="Логотип магазина Mishka">
-    </a>
-
-    <section class="footer__socials">
-      <h2 class="visually-hidden">Найти нас в соцсетях</h2>
-      <ul class="socials footer__socials-list">
-        <li class="socials__item">
-          <a class="socials__link" href="#">
-            <img src="img/icons/insta-icon.svg" width="22" height="22" alt="Инстаграм">
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link" href="#">
-            <img src="img/icons/fb-icon.svg" width="15" height="29" alt="Фейсбук">
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link" href="#">
-            <img src="img/icons/twitter-icon.svg" width="24" height="20" alt="Твиттер">
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <p class="footer__copyright">
-      Разработано
-      <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-        <img src="img/logo/htmlacademy.svg" width="27" height="34" alt="Логотип HTML-Academy">
+  <footer class="footer page__footer">
+    <div class="container footer__container">
+      <a class="footer__logo-link">
+        <img class="footer__logo-img" src="img/logo/mishka-logo-footer.svg" width="101" height="34" alt="Логотип магазина Mishka">
       </a>
-    </p>
+
+      <section class="footer__socials">
+        <h2 class="visually-hidden">Найти нас в соцсетях</h2>
+        <ul class="socials footer__socials-list">
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <img src="img/icons/insta-icon.svg" width="22" height="22" alt="Инстаграм">
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <img src="img/icons/fb-icon.svg" width="15" height="29" alt="Фейсбук">
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#">
+              <img src="img/icons/twitter-icon.svg" width="24" height="20" alt="Твиттер">
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <p class="footer__copyright">
+        Разработано
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="img/logo/htmlacademy.svg" width="27" height="34" alt="Логотип HTML-Academy">
+        </a>
+      </p>
+    </div>
   </footer>
 </body>
 </html>

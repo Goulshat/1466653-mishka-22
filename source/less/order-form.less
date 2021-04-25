@@ -1,12 +1,23 @@
 .order-form {
   display: flex;
   flex-direction: column;
+  padding-top: 17px;
+
+  @media (min-width: @tablet) {
+    padding-top: 54px;
+  }
 }
 
 .order-form__lead {
-  margin-top: 0;
+  margin: 0;
   margin-bottom: 30px;
   font-size: 13px;
+
+  @media (min-width: @tablet) {
+    padding-left: 175px;
+    padding-right: 175px;
+    font-size: 17px;
+  }
 }
 
 .order-form__fieldset {
@@ -18,19 +29,84 @@
   &:last-of-type {
     margin-bottom: 17px;
   }
-  //@media min-width: @tablet-width;
-  // и паддинги сверху и снизу добавляются
-  //&:nth-of-type(2n) {
-  //  background-color: @grey-bg;
-  //}
+
+  @media (min-width: @tablet) {
+    &:nth-of-type(2n) {
+      background-color: @grey-bg;
+    }
+  }
+}
+
+.order-form__fieldset-container {
+  @media (min-width: @tablet) {
+    position: relative;
+    padding: 50px 30px 50px 170px;
+
+    &--for-checkboxes {
+      column-count: 2;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 175px;
+    padding-right: 175px;
+
+    &--for-checkboxes {
+      column-count: 3;
+      padding-right: 90px;
+    }
+  }
 }
 
 .order-form__legend {
   margin-bottom: 28px;
+
+  @media (min-width: @tablet) {
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    margin: 0;
+
+    &--in-label {
+      top: 15px;
+      left: -155px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    left: 75px;
+
+    &--in-label {
+      left: -95px;
+    }
+  }
 }
 
 .order-form__label:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.order-form__textarea {
+  padding: 17px;
+  width: 100%;
+  min-width: 260px;
+  height: 142px;
+  font-size: 17px;
+  line-height: 17px;
+  color: @black-opacity-30;
+}
+
+.order-form__button-container {
+  @media (min-width: @tablet) {
+    .flex-container;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 175px;
+    padding-right: 175px;
+  }
 }
 
 .order-form__required-text {
@@ -40,8 +116,17 @@
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 16px;
+
+  @media (min-width: @tablet) {
+    order: 1;
+    margin-bottom: 0;
+  }
 }
 
 .order-form__button {
   width: 100%;
+
+  @media (min-width: @tablet) {
+    width: 230px;
+  }
 }

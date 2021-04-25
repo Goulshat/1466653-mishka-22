@@ -7,6 +7,7 @@
 
   @media (min-width: @tablet) {
     .container;
+    padding: 0;
     grid-template-columns: 320px 348px;
     grid-template-rows: min-content min-content;
   }
@@ -68,6 +69,7 @@
     inset 0 1px @block-shadow;
 
   @media (min-width: @tablet) {
+    z-index: 5;
     box-shadow: none;
     min-height: @header-tablet-height;
   }
@@ -115,8 +117,8 @@
 
     &:nth-child(2) {
       //margin-right: auto;
-      border-left: 1px solid @shadow-color;
       flex-grow: 1;
+      border-left: 1px solid @black-opacity-10;
     }
   }
 
@@ -148,28 +150,23 @@
 //Меню справа
 .header__order-item {
   align-items: center;
-  min-height: @header-tablet-height;
 
   @media (min-width: @tablet) {
     align-items: flex-start;
+    min-height: @header-tablet-height;
 
     &:nth-child(-n+2) {
       align-items: center;
-      border-left: 1px solid @shadow-color;
+      border-left: 1px solid @black-opacity-10;
     }
   }
-}
 
-.header__nav-delivery {
-  display: none;
+  &--delivery {
+    display: none;
 
-  @media (min-width: @tablet) {
-    .flex-container;
-    margin: 0;
-    justify-content: flex-end;
-    font-size: 15px;
-    text-align: right;
-    font-weight: 400;
+    @media (min-width: @tablet) {
+      display: flex;
+    }
   }
 }
 
@@ -180,17 +177,28 @@
   align-items: center;
   width: 260px;
   min-height: 79px;
-  padding: 10px 0 10px 46px;
+  padding: 15px 0 15px 46px;
 
   @media (min-width: @tablet) {
     margin: 0;
     padding-left: 0;
     padding-right: 10px;
     width: 100%;
+
+    .header__nav-item & {
+      align-items: flex-start;
+    }
   }
 
   @media (min-width: @desktop) {
-    //&:nth-child(2n) {}
+    .header__nav-item & {
+      align-items: center;
+    }
+
+    .header__nav-item:nth-child(n+3) &,
+    .header__order-item:nth-child(n+3) & {
+      align-items: flex-start;
+    }
   }
 
   &--logo {
@@ -217,5 +225,19 @@
     @media (min-width: @tablet) {
       width: 82px;
     }
+  }
+}
+
+.header__nav-delivery {
+  @media (min-width: @tablet) {
+    .flex-container;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-size: 15px;
+    text-align: right;
+    font-weight: 400;
   }
 }

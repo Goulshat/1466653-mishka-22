@@ -21,6 +21,7 @@
     padding-left: 60px;
 
     @{b}__text::before {
+      /* коробочка по-умолчанию */
       position: absolute;
       top: 0;
       left: 0;
@@ -28,45 +29,78 @@
       width: 38px;
       height: 38px;
       border: 2px solid @text-grey;
+
+      @media (min-width: @tablet) {
+        width: 52px;
+        height: 52px;
+      }
     }
 
     @{b}__text::after {
+      /* внутренний контейнер для галочки */
       position: absolute;
-      top: 12px;
+      top: 10px;
       left: 9px;
       content: "";
+      width: 18px;
+      height: 15px;
+
+      @media (min-width: @tablet) {
+        top: 16px;
+        left: 10px;
+        width: 33px;
+        height: 22px;
+      }
+    }
+  }
+
+  &--checkbox {
+    input:checked + @{b}__text::after {
+      /* галочка появляется*/
+      background: url("../img/icons/tick.svg") center center no-repeat;
+
+      @media (min-width: @tablet) {
+        background-size: 32px 22px;
+      }
     }
   }
 
   &--radio {
     @{b}__text::before {
+      /* закругляем коробочку для радио-кнопок */
       width: 42px;
       height: 42px;
       border-radius: 50%;
     }
 
     input:checked + @{b}__text::after {
+      /* вместо галочки - кружочек, и свое положение */
+      top: 12px;
       left: 12px;
       width: 17px;
       height: 17px;
       background-color: @tiffany;
       border: none;
       border-radius: 50%;
+
+      @media (min-width: @tablet) {
+        top: 11px;
+        left: 11px;
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 
-  &--checkbox {
-    input:checked + @{b}__text::after {
-      width: 23px;
-      height: 16px;
-      background: url("../img/icons/tick.svg") center no-repeat;
-    }
-  }
-
-  img {
+  img { /* иконки телефона и e-mail */
     position: absolute;
-    top: 50%;
+    top: 60%;
     right: 10px;
+
+    @media (min-width: @tablet) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   &:hover,
@@ -83,33 +117,29 @@
 }
 
 .form-label__text {
-  display: block;
+  .flex-container;
+  align-items: center;
   font-size: 19px;
   line-height: 18px;
+
+  @media (min-width: @tablet) {
+    min-height: 50px;
+  }
 }
 
 .form-label__input {
   display: block;
   padding-top: 16px;
   padding-bottom: 16px;
+  width: 100%;
   min-width: 260px;
   background-color: transparent;
   border: none;
   box-shadow: inset 0 -2px 0 @black;
 
   &::placeholder {
-    color: @text-grey-light;
+    color: @black-opacity-30;
     font-size: 17px;
     line-height: 17px;
   }
-}
-
-.form-label__textarea {
-  margin-top: 22px;
-  padding: 17px;
-  width: 260px;
-  height: 142px;
-  font-size: 17px;
-  line-height: 17px;
-  color: @text-grey-light;
 }
