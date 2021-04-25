@@ -2,25 +2,31 @@
   background-color: @hero-bg;
   background-image: url("../img/hero-bg@1x.jpg");
   background-position: center -15px;
-  background-size: auto 130%;
+  background-size: auto 140%;
   background-repeat: no-repeat;
 
   @media (min-width: @tablet) {
     background-position: center 0;
+    background-size: auto 119%;
+  }
+
+  @media (min-width: @desktop) {
+    //background-position: center 0;
   }
 }
 
 .main-content__hero-container {
   .container;
   min-height: 283px;
-  //padding: 72px 0 120px;
+  padding: 72px 30px 120px;
 
   @media (min-width: @tablet) {
     min-height: 625px;
-    padding: 156px 90px 200px;
+    padding: 154px 90px 200px;
   }
 
   @media (min-width: @desktop) {
+    padding-top: 156px;
     padding-left: 175px;
     padding-right: 175px;
   }

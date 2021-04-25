@@ -38,29 +38,32 @@
   @media (min-width: @tablet) {
     display: grid;
     grid-template-columns: min-content 1fr;
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  &--left,
-  &--right {
-    &::after {
-      position: absolute;
-      top: 50%;
-      right: 17.5%;
-      transform: translate(50%, -50%);
-      content: "";
-      background-position: 0 0;
-      background-size: contain;
-      background-repeat: no-repeat;
-      opacity: 0.5;
-    }
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 17.5%;
+    transform: translate(50%, -50%);
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
 
-    &:hover::after {
-      opacity: 0.7;
+    @media (min-width: @desktop) {
+      top: 48%;
+      right: 11%;
     }
+  }
 
-    &:active::after {
-      opacity: 0.3;
-    }
+  &:hover::after {
+    opacity: 0.7;
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 
   &--left {
@@ -85,7 +88,12 @@
     &::after {
       width: 60px;
       height: 60px;
+      right: 18.5%;
       background-image: url("../img/icons/toys-category.svg");
+
+      @media (min-width: @desktop) {
+        right: 12.5%;
+      }
     }
   }
 }
@@ -97,12 +105,11 @@
   padding: 24px 100px 30px 0;
 
   @media (min-width: @tablet) {
-    padding: 30px 50px 40px 35px;
-    //width: 100%;
+    padding: 27px 50px 34px 36px;
   }
 
-  @media (min-width: @tablet) {
-    padding: 35px 100px 40px 30px;
-    //width: 100%;
+  @media (min-width: @desktop) {
+    min-height: 130px;
+    padding: 26px 100px 40px 37px;
   }
 }
