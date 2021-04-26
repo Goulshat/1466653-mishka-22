@@ -1,19 +1,16 @@
 .production-video {
   margin: 0 auto;
-  padding-bottom: 50px; //может в catalog-page.less
   border: 1px solid @block-shadow;
 
   @media (min-width: @tablet) {
     .flex-container;
     flex-direction: column;
-    padding-bottom: 46px;
   }
 
   @media (min-width: @desktop) {
     display: grid;
     grid-template-columns: 683px 1fr;
     grid-template-rows: auto auto;
-    padding-bottom: 0;
   }
 }
 
