@@ -34,14 +34,19 @@
 
 .advantages__list {
   .clear-list;
+  display: grid;
+  row-gap: 8px;
   font-weight: 700;
   line-height: 20px;
   color: @black;
 
   @media (min-width: @tablet) {
-    column-count: 2;
-    column-width: 334px;
-    column-gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 55px;
+    margin-bottom: 55px;
+    //column-count: 2;
+    //column-width: 334px;
+    //column-gap: 30px;
     font-size: 20px;
     line-height: 22px;
   }
@@ -49,13 +54,14 @@
 
 .advantages__item {
   padding: 55px 0 20px;
-  margin-bottom: 8px;
+  //margin-bottom: 8px;
   background-position: 0 0;
   background-repeat: no-repeat;
 
   @media (min-width: @tablet) {
-    margin-bottom: 55px;
+    //margin-bottom: 55px;
     padding-bottom: 0;
+    padding-right: 20px;
     /*
     &:nth-child(3n) {
       margin-bottom: 0;
