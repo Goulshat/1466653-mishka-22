@@ -9,7 +9,7 @@
 <body class="page__body">
   <header class="header page__header">
     <nav class="header__nav">
-      <a class="header-link header__logo-link">
+      <a class="header-link header__logo-link"  href="index.html">
         <div class="header__link-container header__link-container--logo">
           <img class="header-link__logo-img header-link__logo-img--mobile" src="img/logo/mishka-logo-mobile.svg" width="85" height="35" alt="Магазин товаров ручной работы Мишка">
           <img class="header-link__logo-img header-link__logo-img--tablet" src="img/logo/mishka-logo-tablet.svg" width="113" height="46" alt="Магазин товаров ручной работы Мишка">
@@ -23,7 +23,7 @@
 
       <ul class="header__nav-list"><!-- + класс .header__nav-list--closed-->
         <li class="header__nav-item">
-          <a class="header-link" href="catalog.html">
+          <a class="header-link">
             <div class="header__link-container">Каталог товаров</div>
           </a>
         </li>
@@ -61,7 +61,7 @@
             </div>
           </a>
         </li>
-        <li class="header__order-item">
+        <li class="header__order-item header__order-item--delivery">
           <p class="header__link-container header__nav-delivery">Бесплатная доставка по России</p>
         </li>
       </ul>
@@ -70,12 +70,12 @@
 
   <main class="catalog-page">
     <h1 class="main-title catalog-page__main-title">Каталог товаров</h1>
-    <div class="container">
+    <div class="catalog-page__container">
       <ul class="catalog-page__list">
-        <li class="catalog-page__item">
+        <li class="catalog-page__list-item">
           <article class="catalog-item">
             <a class="catalog-item__img-link" href="#">
-              <img class="catalog-item__image" src="img/products/bunny.jpg" width="260" height="195" alt="Вязаная мягкая игрушка Зайчик в голубом костюмчике">
+              <img class="catalog-item__image" src="img/products/bunny-horizont.jpg" width="260" height="195" alt="Вязаная мягкая игрушка Зайчик в голубом костюмчике">
             </a>
             <div class="catalog-item__wrap">
               <a class="catalog-item__title-link" href="#">
@@ -91,7 +91,7 @@
           </article>
         </li>
 
-        <li class="catalog-item catalog-page__item">
+        <li class="catalog-page__list-item">
           <article class="catalog-item">
             <a class="catalog-item__img-link" href="#">
               <img class="catalog-item__image" src="img/products/laundry-bag.jpg" width="260" height="195" alt="Маленькая вязаная корзинка,  белая с оранжевой нижней половиной">
@@ -110,7 +110,7 @@
           </article>
         </li>
 
-        <li class="catalog-item catalog-page__item">
+        <li class="catalog-page__list-item">
           <article class="catalog-item">
             <a class="catalog-item__img-link" href="#">
               <img class="catalog-item__image" src="img/products/large-toys-bag.jpg" width="260" height="195" alt="Вязаная корзина нежно-зеленого цвета, с полоской белого в верхней части">
@@ -130,17 +130,19 @@
         </li>
       </ul>
 
-      <section class="production-video catalog-page__video">
+      <section class="production-video">
         <h2 class="production-video__title">Процесс производства</h2>
-        <video src="#" width="260" height="150" controls></video>
-        <p class="production-video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="button production-video__button" href="form.html">Сделать заказ</a>
+        <video class="production-video__video" src="#" width="260" height="150" controls></video>
+        <div class="production-video__description-wrap">
+          <p class="production-video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="button production-video__button" href="form.html">Сделать заказ</a>
+        </div>
       </section>
     </div>
   </main>
 
   <footer class="footer page__footer">
-    <div class="container footer__container">
+    <div class="footer__container">
       <a class="footer__logo-link">
         <img class="footer__logo-img" src="img/logo/mishka-logo-footer.svg" width="101" height="34" alt="Логотип магазина Mishka">
       </a>

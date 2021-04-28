@@ -11,12 +11,20 @@
     .header-link__icon {
       fill: @tiffany;
     }
+
+    .header-link__logo-img {
+      fill-opacity: 0.6;
+    }
   }
 
   &:active {
     color: @black-opacity-30;
 
     .header-link__icon {
+      fill-opacity: 0.3;
+    }
+
+    .header-link__logo-img {
       fill-opacity: 0.3;
     }
   }
@@ -26,21 +34,8 @@
   }
 }
 
-//интерактивные состояния логотипа в шапке
-//смена прозрачности
+//смена картинок логотипа
 .header-link__logo-img {
-  width: 85px;
-  height: 35px;
-
-  &:hover,
-  &:focus {
-    fill-opacity: 0.6;
-  }
-
-  &:active {
-    fill-opacity: 0.3;
-  }
-
   &--mobile {
     @media (min-width: @tablet) {
       display: none;
@@ -53,7 +48,7 @@
     @media (min-width: @tablet) {
       display: block;
       vertical-align: top;
-      width: 113px;
+      //width: 113px;
       height: 46px;
     }
 

@@ -6,8 +6,12 @@
 .properties__item-wrap {
   display: flex;
   align-items: center;
-  padding: 9px 0 11px;
+  padding: 8px 0 12px;
   border-bottom: 1px solid @block-shadow;
+
+  @media (min-width: @tablet) {
+    //padding: 9px 0 10px;
+  }
 }
 
 .properties__item {
