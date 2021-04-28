@@ -12,11 +12,10 @@
 }
 
 .reviews__container {
-  .container;
   position: relative;
 
   @media (min-width: @tablet) {
-    padding-top: 90px;
+    padding-top: 110px;
     padding-bottom: 90px;
   }
 
@@ -30,6 +29,10 @@
 
 .reviews__title {
   margin-bottom: 13px;
+
+  @media (min-width: @tablet) {
+    padding-right: 190px;
+  }
 }
 
 .reviews__item {
@@ -52,7 +55,6 @@
     font-size: 17px;
     margin-bottom: 60px;
     text-shadow: 0 0 3px @white;
-    //filter: drop-shadow(0 0 3px @white);
   }
 }
 

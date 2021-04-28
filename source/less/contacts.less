@@ -17,7 +17,8 @@
   }
 
   @media (min-width: @desktop) {
-    .container;
+    width: 1050px; //если указать здесь ".container", то паддинги ниже не применяются((
+    margin: 0 auto;
     padding: 150px 15px 105px 175px;
     align-items: flex-start;
     justify-content: space-between;
@@ -32,7 +33,7 @@
 
   @media (min-width: @desktop) {
     width: 100%;
-    margin: 0;
+    margin-bottom: 30px;
     padding: 0;
   }
 }
