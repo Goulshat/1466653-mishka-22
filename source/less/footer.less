@@ -23,6 +23,7 @@
 }
 
 .footer__socials-list {
+  flex-basis: auto;
   border-bottom: 1px solid @socials-border-bottom;
 
   @media (min-width: @tablet) {
@@ -31,8 +32,9 @@
 }
 
 .footer__copyright {
+  flex-basis: auto;
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
   align-items: center;
   margin: 0;
   padding: 0 32px 0 40px;
@@ -41,6 +43,12 @@
   font-size: 19px;
   line-height: 19px;
   color: @black;
+
+  @media (min-width: @tablet) {
+    justify-content: flex-end;
+    padding-right: 0;
+    max-width: 240px;
+  }
 }
 
 .footer__copyright-link {
