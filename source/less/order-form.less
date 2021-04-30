@@ -6,28 +6,51 @@
   @media (min-width: @tablet) {
     padding-top: 54px;
   }
+
+  @media (min-width: @desktop) {
+    padding-top: 98px;
+  }
+}
+
+.order-form__lead-container {
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 18px;
+  }
 }
 
 .order-form__lead {
   margin: 0;
-  margin-bottom: 30px;
   font-size: 13px;
+
+  @media (min-width: @tablet) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 
   @media (min-width: @desktop) {
     padding-left: 175px;
     padding-right: 175px;
-    font-size: 17px;
   }
 }
 
 .order-form__fieldset {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
   padding: 0;
   border: none;
 
+  &:first-of-type {
+    margin-bottom: 30px;
+  }
+
+  &:nth-of-type(2) {
+    margin-bottom: 30px;
+  }
+
   &:last-of-type {
-    margin-bottom: 17px;
+    margin-bottom: 11px;
   }
 
   @media (min-width: @tablet) {
@@ -42,7 +65,7 @@
 
   @media (min-width: @tablet) {
     position: relative;
-    padding: 50px 30px 50px 170px;
+    padding: 50px 50px 50px 220px;//сверху 45пикс
 
     &--for-checkboxes {
       column-count: 2;
@@ -61,15 +84,33 @@
 }
 
 .order-form__legend {
-  margin-bottom: 28px;
+  margin-bottom: 34px;
+
+  &--checkboxes {
+    margin-bottom: 25px;
+  }
+
+  &--bio {
+    margin-bottom: 30px;
+  }
+
+  &--contacts {
+    margin-bottom: 5px;
+  }
+
+  &--textarea {
+    padding-bottom: 0;
+    margin-bottom: 21px;
+  }
 
   @media (min-width: @tablet) {
     position: absolute;
     top: 60px;
     left: 50px;
     margin: 0;
+    width: auto;
 
-    &--in-label {
+    &--contacts {
       top: 15px;
       left: -125px;
     }
@@ -77,16 +118,27 @@
 
   @media (min-width: @desktop) {
     left: 75px;
-    width: auto;
 
-    &--in-label {
+    &--contacts {
       left: -95px;
     }
   }
 }
 
-.order-form__label:not(:last-child) {
-  margin-bottom: 20px;
+.order-form__label {
+  margin-bottom: 21px;
+
+  &--radio {
+    margin-bottom: 11px;
+  }
+
+  &--contacts {
+    margin-bottom: 34px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .order-form__textarea {
@@ -97,6 +149,7 @@
   font-size: 17px;
   line-height: 17px;
   color: @black-opacity-30;
+  border: 2px solid @text-grey;
 }
 
 .order-form__button-container {
@@ -116,7 +169,6 @@
 
 .order-form__required-text {
   display: block;
-  vertical-align: middle;
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 14px;
@@ -130,6 +182,7 @@
 
 .order-form__button {
   width: 100%;
+  font-size: 17px;
 
   @media (min-width: @tablet) {
     width: 230px;

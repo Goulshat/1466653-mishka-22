@@ -5,6 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mishka: заказать товар</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Pixel Glass -->
+  <style>
+    html {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      background-image: url("img/mockups/form-mobile.jpg");
+    }
+    /* Tablet */
+    @media (min-width: 768px) {
+      html {
+        background-image: url("img/mockups/form-tablet.png");
+      }
+    }
+    /* Desktop */
+    @media (min-width: 1150px) {
+      html {
+        background-image: url("img/mockups/form-desktop.png");
+      }
+    }
+  </style>
+  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+  <script src="../node_modules/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
 </head>
 <body class="page__body ">
   <header class="header page__header">
@@ -73,18 +96,18 @@
       <div class="order-page__title-container">Вязание на заказ</div>
     </h1>
     <form class="order-form order-page__form" action="https://echo.htmlacademy.ru" method="POST">
-      <div class="container">
+      <div class="container order-form__lead-container">
         <p class="order-form__lead">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       </div>
 
       <fieldset class="order-form__fieldset">
         <div class="order-form__fieldset-container">
           <legend class="form-headline order-form__legend">Тип</legend>
-          <label class="form-label form-label--radio order-form__label" order-form__label>
+          <label class="form-label form-label--radio order-form__label order-form__label--radio">
             <input class="visually-hidden" type="radio" name="item-type" value="accessories" checked>
             <span class="form-label__text">Аксессуар для интерьера</span>
           </label>
-          <label class="form-label form-label--radio order-form__label">
+          <label class="form-label form-label--radio order-form__label order-form__label--radio">
             <input class="visually-hidden" type="radio" name="item-type" value="toys">
             <span class="form-label__text">Детская игрушка</span>
           </label>
@@ -93,7 +116,7 @@
 
       <fieldset class="order-form__fieldset">
         <div class="order-form__fieldset-container order-form__fieldset-container--for-checkboxes">
-          <legend class="form-headline order-form__legend">Цвет</legend>
+          <legend class="form-headline order-form__legend order-form__legend--checkboxes">Цвет</legend>
           <label class="form-label form-label--checkbox order-form__label">
             <input class="visually-hidden" type="checkbox" name="item-color" value="white" checked>
             <span class="form-label__text">Белый</span>
@@ -104,7 +127,7 @@
           </label>
           <label class="form-label form-label--checkbox order-form__label">
             <input class="visually-hidden" type="checkbox" name="item-color" value="tiffany">
-            <span class="form-label__text">Тиффани</span>
+            <span class="form-label__text">&laquo;Тиффани&raquo;</span>
           </label>
           <label class="form-label form-label--checkbox order-form__label">
             <input class="visually-hidden" type="checkbox" name="item-color" value="black">
@@ -123,7 +146,7 @@
 
       <fieldset class="order-form__fieldset">
         <div class="order-form__fieldset-container">
-          <legend class="form-headline order-form__legend">ФИО</legend>
+          <legend class="form-headline order-form__legend order-form__legend--bio">ФИО</legend>
           <label class="form-label">
             <span class="form-label__text">Имя:</span>
             <input class="form-label__input" type="text" name="first-name" placeholder="Введите ваше имя*" required>
@@ -141,22 +164,22 @@
 
       <fieldset class="order-form__fieldset">
         <div class="order-form__fieldset-container">
-          <label class="form-label">
-            <span class="form-headline order-form__legend order-form__legend--in-label">Тел</span>
+          <label class="form-label order-form__label--contacts">
+            <span class="form-headline order-form__legend order-form__legend--contacts">Тел</span>
             <input class="form-label__input" type="tel" name="order-tel" placeholder="+7 XXX XXX XX XX*" >
-            <img src="img/icons/phone-icon.svg" width="25" height="24" alt="" aria-hidden="true">
+            <img class="form-label__icon form-label__icon--tel" src="img/icons/phone-icon.svg" width="25" height="24" alt="" aria-hidden="true">
           </label>
-          <label class="form-label">
-            <span class="form-headline form-headline--email order-form__legend order-form__legend--in-label">E-mail</span>
+          <label class="form-label order-form__label--contacts">
+            <span class="form-headline form-headline--email order-form__legend order-form__legend--contacts">E-mail</span>
             <input class="form-label__input" type="email" name="order-email" placeholder="Ваш Email*">
-            <img src="img/icons/email-icon.svg" width="32" height="21" alt="" aria-hidden="true">
+            <img class="form-label__icon form-label__icon--email" src="img/icons/email-icon.svg" width="32" height="21" alt="" aria-hidden="true">
           </label>
         </div>
       </fieldset>
 
       <fieldset class="order-form__fieldset">
         <div class="order-form__fieldset-container">
-          <legend class="form-headline order-form__legend">Доп</legend>
+          <legend class="form-headline order-form__legend order-form__legend--textarea">Доп</legend>
           <textarea class="order-form__textarea" name="extra-info" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </div>
       </fieldset>
