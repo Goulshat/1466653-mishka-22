@@ -117,27 +117,27 @@
       <fieldset class="order-form__fieldset">
         <div class="order-form__fieldset-container order-form__fieldset-container--for-checkboxes">
           <legend class="form-headline order-form__legend order-form__legend--checkboxes">Цвет</legend>
-          <label class="form-label form-label--checkbox order-form__label">
+          <label class="form-label form-label--checkbox order-form__label order-form__label--checkbox">
             <input class="visually-hidden" type="checkbox" name="item-color" value="white" checked>
             <span class="form-label__text">Белый</span>
           </label>
-          <label class="form-label form-label--checkbox order-form__label">
+          <label class="form-label form-label--checkbox order-form__label order-form__label--checkbox">
             <input class="visually-hidden" type="checkbox" name="item-color" value="grey" checked>
             <span class="form-label__text">Серый</span>
           </label>
-          <label class="form-label form-label--checkbox order-form__label">
+          <label class="form-label form-label--checkbox order-form__label order-form__label--checkbox">
             <input class="visually-hidden" type="checkbox" name="item-color" value="tiffany">
             <span class="form-label__text">&laquo;Тиффани&raquo;</span>
           </label>
-          <label class="form-label form-label--checkbox order-form__label">
+          <label class="form-label form-label--checkbox order-form__label order-form__label--checkbox">
             <input class="visually-hidden" type="checkbox" name="item-color" value="black">
             <span class="form-label__text">Черный</span>
           </label>
-          <label class="form-label form-label--checkbox order-form__label">
+          <label class="form-label form-label--checkbox order-form__label order-form__label--checkbox">
             <input class="visually-hidden" type="checkbox" name="item-color" value="pink">
             <span class="form-label__text">Розовый</span>
           </label>
-          <label class="form-label form-label--checkbox order-form__label">
+          <label class="form-label form-label--checkbox order-form__label order-form__label--checkbox">
             <input class="visually-hidden" type="checkbox" name="item-color" value="orange">
             <span class="form-label__text">Оранжевый</span>
           </label>
@@ -147,29 +147,29 @@
       <fieldset class="order-form__fieldset">
         <div class="order-form__fieldset-container">
           <legend class="form-headline order-form__legend order-form__legend--bio">ФИО</legend>
-          <label class="form-label">
+          <label class="form-label order-form__label">
             <span class="form-label__text">Имя:</span>
             <input class="form-label__input" type="text" name="first-name" placeholder="Введите ваше имя*" required>
           </label>
-          <label class="form-label">
+          <label class="form-label order-form__label">
             <span class="form-label__text">Фамилия:</span>
             <input class="form-label__input" type="text" name="last-name" placeholder="Укажите фамилию*" required>
           </label>
-          <label class="form-label">
+          <label class="form-label order-form__label">
             <span class="form-label__text">Отчество:</span>
-            <input class="form-label__input" type="text" name="middle-name" placeholder="Отчество если желаете*" >
+            <input class="form-label__input" type="text" name="middle-name" placeholder="Отчество, если желаете*" >
           </label>
         </div>
       </fieldset>
 
       <fieldset class="order-form__fieldset">
         <div class="order-form__fieldset-container">
-          <label class="form-label order-form__label--contacts">
+          <label class="form-label order-form__label order-form__label--contacts">
             <span class="form-headline order-form__legend order-form__legend--contacts">Тел</span>
             <input class="form-label__input" type="tel" name="order-tel" placeholder="+7 XXX XXX XX XX*" >
             <img class="form-label__icon form-label__icon--tel" src="img/icons/phone-icon.svg" width="25" height="24" alt="" aria-hidden="true">
           </label>
-          <label class="form-label order-form__label--contacts">
+          <label class="form-label order-form__label order-form__label--contacts">
             <span class="form-headline form-headline--email order-form__legend order-form__legend--contacts">E-mail</span>
             <input class="form-label__input" type="email" name="order-email" placeholder="Ваш Email*">
             <img class="form-label__icon form-label__icon--email" src="img/icons/email-icon.svg" width="32" height="21" alt="" aria-hidden="true">
@@ -178,7 +178,7 @@
       </fieldset>
 
       <fieldset class="order-form__fieldset">
-        <div class="order-form__fieldset-container">
+        <div class="order-form__fieldset-container order-form__fieldset-container--textarea">
           <legend class="form-headline order-form__legend order-form__legend--textarea">Доп</legend>
           <textarea class="order-form__textarea" name="extra-info" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </div>
