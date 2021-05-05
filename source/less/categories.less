@@ -3,7 +3,13 @@
   background-color: @hero-bg;
 
   @media (min-width: @tablet) {
-    .white-zigzag;
+    .white-wave;
+    //.white-wave--index;
+
+    &::after {
+      bottom: -10px;
+      background-size: 38px auto;
+    }
   }
 }
 

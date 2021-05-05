@@ -5,6 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог товаров магазина Mishka</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Pixel Glass -->
+  <style>
+    html {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      background-image: url("img/mockups/catalog-mobile.png");
+    }
+    /* Tablet */
+    @media (min-width: 768px) {
+      html {
+        background-image: url("img/mockups/catalog-tablet.png");
+      }
+    }
+    /* Desktop */
+    @media (min-width: 1150px) {
+      html {
+        background-image: url("img/mockups/catalog-desktop.png");
+      }
+    }
+  </style>
+  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+  <script src="../node_modules/pixel-glass/script.js"></script>
+  <!-- Pixel Glass -->
 </head>
 <body class="page__body">
   <header class="header page__header">
@@ -84,7 +107,7 @@
               <p class="catalog-item__info">Рост 30 см, вес 200 г</p>
               <p class="catalog-item__price">1 200 руб.
                 <button class="catalog-item__button" type="button" aria-label="Добавить в корзину мягкую игрушку Зайчик-попрыгайчик">
-                  <img class="link-icon" src="img/icons/cart-icon.svg" width="20" height="19" alt="" aria-hidden="true">
+                  <img class="link-icon catalog-item__button-icon" src="img/icons/cart-icon.svg" width="20" height="19" alt="" aria-hidden="true">
                 </button>
               </p>
             </div>
@@ -103,7 +126,7 @@
               <p class="catalog-item__info">Диаметр 15 см, высота 10 см</p>
               <p class="catalog-item__price">690 руб.
                 <button class="catalog-item__button" type="button" aria-label="Добавить в корзину вязаную корзинку для белья">
-                  <img class="link-icon" src="img/icons/cart-icon.svg" width="20" height="19" alt="" aria-hidden="true">
+                  <img class="link-icon catalog-item__button-icon" src="img/icons/cart-icon.svg" width="20" height="19" alt="" aria-hidden="true">
                 </button>
               </p>
             </div>
@@ -117,12 +140,12 @@
             </a>
             <div class="catalog-item__wrap">
               <a class="catalog-item__title-link" href="#">
-                <h2 class="catalog-item__title">Большая корзинка для игрушек</h2>
+                <h2 class="catalog-item__title">Большая корзинка для&nbsp;игрушек</h2>
               </a>
               <p class="catalog-item__info">Диаметр 30 см, высота 30 см</p>
               <p class="catalog-item__price">1 500 руб.
                 <button class="catalog-item__button" type="button" aria-label="Добавить в корзину большую корзинку для игрушек">
-                  <img class="link-icon" src="img/icons/cart-icon.svg" width="20" height="19" alt="" aria-hidden="true">
+                  <img class="link-icon catalog-item__button-icon" src="img/icons/cart-icon.svg" width="20" height="19" alt="" aria-hidden="true">
                 </button>
               </p>
             </div>
@@ -132,10 +155,13 @@
 
       <section class="production-video">
         <h2 class="production-video__title">Процесс производства</h2>
-        <video class="production-video__video" src="#" width="260" height="150" controls></video>
+        <div class="production-video__video-wrap">
+          <video class="production-video__video" src="#" width="260" height="150" poster="img/video-posters/production-video.jpg" controls></video>
+          <button class="production-video__play-button" type="button" aria-label="Включить видеоролик о процессе производства наших товаров"></button>
+        </div>
         <div class="production-video__description-wrap">
           <p class="production-video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a class="button production-video__button" href="form.html">Сделать заказ</a>
+          <a class="button production-video__order-button" href="form.html">Сделать заказ</a>
         </div>
       </section>
     </div>

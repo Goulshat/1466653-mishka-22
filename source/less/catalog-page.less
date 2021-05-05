@@ -1,24 +1,9 @@
-.catalog-page__container {
-  .container;
-  padding-top: 30px;
-  padding-bottom: 58px;
-
-  @media (min-width: @tablet) {
-    padding-top: 67px;
-    padding-bottom: 46px;
-  }
-
-  @media (min-width: @desktop) {
-    padding-bottom: 64px;
-  }
-}
-
 .catalog-page__main-title {
   position: relative;
-  padding: 73px 0;
+  padding: 74px 0 73px;
 
   @media (min-width: @tablet) {
-    .white-zigzag;
+    .white-wave;
     padding: 100px 130px 75px;
     min-height: 238px;
   }
@@ -30,19 +15,44 @@
   }
 }
 
+.catalog-page__container {
+  .container;
+  padding-top: 30px;
+  padding-bottom: 58px;
+
+  @media (min-width: @tablet) {
+    padding-top: 65px;
+    padding-bottom: 64px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 110px;
+    padding-bottom: 104px;
+  }
+}
+
 .catalog-page__list {
   .clear-list;
   margin-bottom: 30px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 53px;
+  }
 
   @media (min-width: @desktop) {
     display: grid;
     grid-template-columns: repeat(3, 316px);
     column-gap: 51px;
+    margin-bottom: 57px;
   }
 }
 
 .catalog-page__list-item {
   margin-bottom: 30px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 54px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -50,6 +60,6 @@
 
   @media (min-width: @desktop) {
     margin-bottom: 0;
-    display: flex;
+    display: flex;//и содержимое растягивается в высоту
   }
 }
