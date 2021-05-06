@@ -1,6 +1,6 @@
 .reviews {
   @media (min-width: @tablet) {
-    background: url("../img/review-background@1x.jpg") left top / 350px auto no-repeat;
+    .reviews-bg;
   }
 
   @media (min-width: @desktop) {
@@ -14,7 +14,7 @@
   padding-bottom: 45px;
 
   @media (min-width: @tablet) {
-    padding-top: 85px;
+    padding-top: 83px;
     padding-bottom: 115px;
   }
 
@@ -22,7 +22,7 @@
     padding-top: 78px;
     padding-left: 175px;
     padding-bottom: 160px;
-    background: url("../img/review-background@1x.jpg") left top / 350px auto no-repeat;
+    .reviews-bg;
   }
 }
 
@@ -69,6 +69,14 @@
   font-style: normal;
   font-weight: 700;
   color: @black;
+
+  @media (min-width: @tablet) {
+    font-size: 18px;//вот это похоже больше на опечатку дизайнера
+  }
+
+  @media (min-width: @tablet) {
+    font-size: 17px;
+  }
 }
 
 .reviews__author-link {
@@ -84,7 +92,7 @@
 
   @media (min-width: @tablet) {
     position: absolute;
-    bottom: 118px;
+    bottom: 116px;
     right: 50px;
     margin-bottom: 0;
   }

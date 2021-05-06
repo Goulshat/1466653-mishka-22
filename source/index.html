@@ -34,9 +34,11 @@
       <nav class="header__nav">
         <a class="header-link header__logo-link">
           <div class="header__link-container header__link-container--logo">
-            <img class="header-link__logo-img header-link__logo-img--mobile" src="img/logo/mishka-logo-mobile.svg" width="85" height="35" alt="Магазин товаров ручной работы Мишка">
-            <img class="header-link__logo-img header-link__logo-img--tablet" src="img/logo/mishka-logo-tablet.svg" width="113" height="46" alt="Магазин товаров ручной работы Мишка">
-            <img class="header-link__logo-img header-link__logo-img--desktop" src="img/logo/mishka-logo-desktop.svg" width="149" height="72" alt="Магазин товаров ручной работы Мишка">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo/mishka-logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo/mishka-logo-tablet.svg">
+              <img class="header-link__logo-img" src="img/logo/mishka-logo-mobile.svg" width="149" height="72" alt="Магазин товаров ручной работы Мишка">
+            </picture>
           </div>
         </a>
 
@@ -115,7 +117,7 @@
             <b class="promo__heading">Товар недели</b>
           </div>
 
-          <p class="promo__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
+          <p class="promo__description">Экологически чистая пряжа, ручная работа. Доступны в&nbsp;шести расцветках и&nbsp;трех размерах.</p>
 
           <dl class="properties promo__properties-list">
             <div class="properties__item-wrap">
@@ -132,7 +134,14 @@
             </div>
           </dl>
 
-          <img class="promo__image" src="img/products/triple-set-mobile@1x.jpg" width="360" height="315" alt="Вязаные корзинки в трех размерах в двух расцветках: серый с Тиффани, нежно-розовый с белым">
+          <div class="promo__img-wrap">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/products/triple-set-desktop.jpg 1x, img/products/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/products/triple-set-tablet.jpg 1x, img/products/triple-set-tablet@2x.jpg 2x">
+              <img class="promo__image" src="img/products/triple-set-mobile.jpg" srcset="img/products/triple-set-mobile@2x.jpg 2x" width="360" height="315" alt="Вязаные корзинки в трех размерах в двух расцветках: серый с Тиффани, нежно-розовый с белым">
+            </picture>
+          </div>
+
           <div class="promo__price-wrap">
             <p class="promo__price">
               Цена:
@@ -161,7 +170,7 @@
         <div class="container reviews__container">
           <h2 class="section-title reviews__title">Отзывы</h2>
           <blockquote class="reviews__item">
-            <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            <p class="reviews__text">Я молодая мама, но&nbsp;всё&nbsp;равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильными, а&nbsp;также набирают больше лайков!</p>
             <cite class="reviews__author-name">Анастасия Красильникова</cite>
             <a class="reviews__author-link" href="#">@misssssiskras</a>
           </blockquote>
@@ -189,7 +198,7 @@
             </dl>
           </div>
 
-          <img class="contacts__map" src="img/map@1x.png" alt="Отметка на карте магазина Мишка" width="320" height="454">
+          <img class="contacts__map" src="img/map.jpg" srcset="img/map@2x.jpg 2x" alt="Отметка магазина Мишка на карте Санкт-Петербурга" width="320" height="454">
           <button class="button button--contact-us contacts__button">Напишите нам</button>
         </div>
       </section>

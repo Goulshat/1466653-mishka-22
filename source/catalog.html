@@ -34,9 +34,11 @@
     <nav class="header__nav">
       <a class="header-link header__logo-link"  href="index.html">
         <div class="header__link-container header__link-container--logo">
-          <img class="header-link__logo-img header-link__logo-img--mobile" src="img/logo/mishka-logo-mobile.svg" width="85" height="35" alt="Магазин товаров ручной работы Мишка">
-          <img class="header-link__logo-img header-link__logo-img--tablet" src="img/logo/mishka-logo-tablet.svg" width="113" height="46" alt="Магазин товаров ручной работы Мишка">
-          <img class="header-link__logo-img header-link__logo-img--desktop" src="img/logo/mishka-logo-desktop.svg" width="149" height="72" alt="Магазин товаров ручной работы Мишка">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo/mishka-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo/mishka-logo-tablet.svg">
+            <img class="header-link__logo-img" src="img/logo/mishka-logo-mobile.svg" width="149" height="72" alt="Магазин товаров ручной работы Мишка">
+          </picture>
         </div>
       </a>
 

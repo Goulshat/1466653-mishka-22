@@ -17,7 +17,7 @@
     left: 0;
     width: 100%;
     height: 35px;
-    background: url("../img/zigzag-template-white.svg") left bottom / 39px auto repeat-x;
+    background: url("../img/templates/white-wave-template.svg") left bottom / 39px auto repeat-x;
 
     @media (min-width: @desktop) {
       height: 50px;
@@ -31,6 +31,28 @@
   bottom: -10px;
   background-size: 39px auto;
 }
+
+.grey-wave() {
+  background: url("../img/templates/grey-wave-template.svg") left bottom repeat-x;
+
+  @media (min-width: @tablet) {
+    background-size: 39px 18px;
+  }
+
+  @media (min-width: @desktop) {
+    background-size: 52px 30px;
+  }
+}
+
+.reviews-bg() {
+  background: url("../img/review-bg.jpg") left top / 350px auto no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/review-bg@2x.jpg");
+    background-size: 350px  auto;
+  }
+}
+
 /* Color Picker
 
 <section class="flex">
