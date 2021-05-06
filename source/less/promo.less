@@ -105,12 +105,9 @@
   }
 }
 
-.promo__image {
-  display: block;
+.promo__img-wrap {
   margin-top: 28px;
   margin-bottom: 26px;
-  background-color: @grey-bg;
-  object-fit: contain;
 
   @media (min-width: @tablet) {
     grid-column: ~"2 / 4";
@@ -118,9 +115,6 @@
     margin: 0;
     margin-top: 12px;
     margin-left: auto;
-    //padding-top: 12px;
-    width: 334px;
-    height: 404px;
   }
 
   @media (min-width: @desktop) {
@@ -135,10 +129,25 @@
   }
 }
 
+.promo__image {
+  display: block;
+  background-color: @grey-bg;
+  object-fit: contain;
+
+  @media (min-width: @tablet) {
+    width: 334px;
+    height: 404px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 525px;
+    height: 636px;
+  }
+}
+
 .promo__price-wrap {
   @media (min-width: @tablet) {
     grid-column: ~"1 / 2";
-    //justify-self: flex-end;
   }
 }
 
