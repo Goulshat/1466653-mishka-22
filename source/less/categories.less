@@ -11,6 +11,17 @@
       background-size: 38px auto;
     }
   }
+
+  @media (min-width: @desktop) {
+    &::after {
+      background-size: 63px auto;
+      /*
+      height: 50px;
+      background-size: 57px auto; //63px
+      background-position: -51px 100%;
+      */
+    }
+  }
 }
 
 .categories__container {
