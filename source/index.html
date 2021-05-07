@@ -7,7 +7,9 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/152.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
-    <link rel="manifest" href="fonts/opensans.woff2" as="font">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="stylesheet" href="css/style.css">
     <!-- Pixel Glass -->
     <style>
@@ -98,10 +100,10 @@
     </header>
 
     <main class="index-page page__main">
-      <h1 class="main-title index-page__hero">
-        <div class="index-page__hero-container">Милые&nbsp;штуки ручной работы&nbsp;для&nbsp;дома</div>
-      </h1>
-
+      <div class="index-page__hero-wrap">
+        <h1 class="main-title index-page__hero">
+        Милые&nbsp;штуки ручной работы&nbsp;для&nbsp;дома</h1>
+      </div>
       <section class="categories">
         <h2 class="visually-hidden">Наши товары</h2>
         <div class="categories__container">

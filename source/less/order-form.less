@@ -1,6 +1,7 @@
 .order-form {
   display: flex;
   flex-direction: column;
+  margin: 0;
   padding-top: 17px;
 
   @media (min-width: @tablet) {
@@ -35,38 +36,38 @@
   }
 }
 
-.order-form__fieldset {
-  margin: 0;
+.order-form__fieldset-container {
   margin-bottom: 30px;
-  padding: 0;
-  border: none;
 
-  &:nth-of-type(3),
-  &:nth-of-type(4) {
+  &:nth-of-type(4),
+  &:nth-of-type(5) {
     margin-bottom: 34px;
   }
 
-  &:last-of-type {
+  &:nth-of-type(6) {
     margin-bottom: 11px;
   }
 
   @media (min-width: @tablet) {
     margin-bottom: 0;
 
-    &:nth-of-type(3),
     &:nth-of-type(4),
-    &:last-of-type {
+    &:nth-of-type(5),
+    &:nth-of-type(6) {
       margin-bottom: 0;
     }
 
-    &:nth-of-type(2n) {
+    &:nth-of-type(2n+1) {
       background-color: @grey-bg;
     }
   }
 }
 
-.order-form__fieldset-container {
+.order-form__fieldset {
+  margin: 0;
+  padding: 0;
   .container;
+  border: none;
 
   @media (min-width: @tablet) {
     position: relative;
@@ -172,10 +173,6 @@
 
     &--checkbox {
       margin-bottom: 0;
-    }
-
-    &--contacts {
-      margin-bottom: 36px;
     }
   }
 
