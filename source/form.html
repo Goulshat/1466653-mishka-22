@@ -108,8 +108,8 @@
         <p class="order-form__lead">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       </div>
 
-      <fieldset class="order-form__fieldset">
-        <div class="order-form__fieldset-container">
+      <div class="order-form__fieldset-container">
+        <fieldset class="order-form__fieldset">
           <legend class="form-headline order-form__legend">Тип</legend>
           <label class="form-label form-label--radio order-form__label order-form__label--radio">
             <input class="visually-hidden" type="radio" name="item-type" value="accessories" checked>
@@ -119,11 +119,11 @@
             <input class="visually-hidden" type="radio" name="item-type" value="toys">
             <span class="form-label__text">Детская игрушка</span>
           </label>
-        </div>
-      </fieldset>
+        </fieldset>
+      </div>
 
-      <fieldset class="order-form__fieldset">
-        <div class="order-form__fieldset-container order-form__fieldset-container--for-checkboxes">
+      <div class="order-form__fieldset-container">
+        <fieldset class="order-form__fieldset order-form__fieldset--for-checkboxes">
           <legend class="form-headline order-form__legend order-form__legend--checkboxes">Цвет</legend>
           <label class="form-label form-label--checkbox order-form__label order-form__label--checkbox">
             <input class="visually-hidden" type="checkbox" name="item-color" value="white" checked>
@@ -149,11 +149,11 @@
             <input class="visually-hidden" type="checkbox" name="item-color" value="orange">
             <span class="form-label__text">Оранжевый</span>
           </label>
-        </div>
-      </fieldset>
+        </fieldset>
+      </div>
 
-      <fieldset class="order-form__fieldset">
-        <div class="order-form__fieldset-container">
+      <div class="order-form__fieldset-container">
+        <fieldset class="order-form__fieldset">
           <legend class="form-headline order-form__legend order-form__legend--bio">ФИО</legend>
           <label class="form-label order-form__label">
             <span class="form-label__text">Имя:</span>
@@ -167,11 +167,11 @@
             <span class="form-label__text">Отчество:</span>
             <input class="form-label__input" type="text" name="middle-name" placeholder="Отчество, если желаете*" >
           </label>
-        </div>
-      </fieldset>
+        </fieldset>
+      </div>
 
-      <fieldset class="order-form__fieldset">
-        <div class="order-form__fieldset-container">
+      <div class="order-form__fieldset-container">
+        <fieldset class="order-form__fieldset">
           <label class="form-label order-form__label order-form__label--contacts">
             <span class="form-headline order-form__legend order-form__legend--contacts">Тел</span>
             <input class="form-label__input" type="tel" name="order-tel" placeholder="+7 XXX XXX XX XX*" >
@@ -182,15 +182,15 @@
             <input class="form-label__input" type="email" name="order-email" placeholder="Ваш Email*">
             <img class="form-label__icon form-label__icon--email" src="img/icons/email-icon.svg" width="32" height="21" alt="" aria-hidden="true">
           </label>
-        </div>
-      </fieldset>
+        </fieldset>
+      </div>
 
-      <fieldset class="order-form__fieldset">
-        <div class="order-form__fieldset-container order-form__fieldset-container--textarea">
+      <div class="order-form__fieldset-container">
+        <fieldset class="order-form__fieldset order-form__fieldset--textarea">
           <legend class="form-headline order-form__legend order-form__legend--textarea">Доп</legend>
           <textarea class="order-form__textarea" name="extra-info" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-        </div>
-      </fieldset>
+        </fieldset>
+      </div>
 
       <div class="order-form__button-container">
         <small class="order-form__required-text">*Поля обязательны для заполнения</small>
