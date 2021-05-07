@@ -1,21 +1,22 @@
 .index-page__hero {
   background-color: @hero-bg;
-  background-image: url("../img/hero-bg.jpg");
+  background-image: url("../img/hero-bg-mobile.jpg");
   background-position: center -15px;
-  background-size: auto 140%;
+  background-size: auto 130%;
   background-repeat: no-repeat;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/hero-bg@2x.jpg");
+    background-image: url("../img/hero-bg-mobile@2x.jpg");
   }
 
   @media (min-width: @tablet) {
+    background-image: url("../img/hero-bg.jpg");
     background-position: center 0;
     background-size: auto 119%;
-  }
 
-  @media (min-width: @desktop) {
-    //background-position: center 0;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-bg@2x.jpg");
+    }
   }
 }
 
