@@ -60,17 +60,14 @@
 
 .footer__copyright-link {
   .flex-container;
+  margin: 0;
+  padding: 0;
   align-items: center;
   justify-content: flex-end;
-  height: 38px;
   fill: @tiffany;
 
   @media (min-width: @tablet) {
     margin-left: 18px;
-    height: 43px;
-  }
-
-  @media (min-width: @tablet) {
     height: 43px;
   }
 
@@ -81,5 +78,15 @@
   &:active {
     fill: @tiffany-darker;
     fill-opacity: 0.3;
+  }
+}
+
+.footer__copyright-logo {
+  width: 30px;
+  height: 38px;
+
+  @media (min-width: @tablet) {
+    width: 36px;
+    height: 45px;
   }
 }
