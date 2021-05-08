@@ -4,20 +4,22 @@
   color: @black;
   font-weight: 700;
 
-  &:hover,
-  &:focus {
+
+  &[href]:hover,
+  &[href]:focus {
     color: @black-opacity-60;
 
     .header-link__icon {
       fill: @tiffany;
+      opacity: 1;
     }
 
     .header-link__logo-img {
-      fill-opacity: 0.6;
+      opacity: 0.6;
     }
   }
 
-  &:active {
+  &[href]:active {
     color: @black-opacity-30;
 
     .header-link__icon {
@@ -25,7 +27,7 @@
     }
 
     .header-link__logo-img {
-      fill-opacity: 0.3;
+      opacity: 0.3;
     }
   }
 
@@ -55,6 +57,8 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  fill: @black;
+  opacity: 0.2;
 
   @media (min-width: @tablet) {
     left: 32px;
