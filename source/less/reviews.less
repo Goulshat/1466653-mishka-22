@@ -64,13 +64,12 @@
 
 .reviews__author-name {
   display: block;
-  margin-bottom: 3px;
-  vertical-align: middle;
   font-style: normal;
   font-weight: 700;
   color: @black;
 
   @media (min-width: @tablet) {
+    max-width: 350px;
     font-size: 18px;//вот это похоже больше на опечатку дизайнера
   }
 
@@ -81,7 +80,7 @@
 
 .reviews__author-link {
   display: block;
-  vertical-align: middle;
+  max-width: 350px;
   line-height: 30px;
 }
 
@@ -108,7 +107,8 @@
     position: absolute;
     top: 80px;
     right: 50px;
-    width: 175px;
+    min-width: 175px;
+    max-width: 300px;
   }
 
   @media (min-width: @desktop) {
