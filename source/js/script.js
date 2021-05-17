@@ -20,17 +20,19 @@ navToggle.addEventListener("click", function(evt) {
 
 /* Модальное окно */
 const modal = document.querySelector(".modal-order");
-const buttonAddCart = document.querySelector(".button--add-to-cart");
+const addCartButtons = document.querySelectorAll(".js-add-to-cart");
 const modalForm = document.querySelector(".modal-order__form");
 
 // при нажатии на ссылку "заказать" открывается попап
-buttonAddCart.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  modal.classList.add("modal-order--open");
-});
+for (let addCartButton of addCartButtons) {
+  addCartButton.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    modal.classList.add("modal-order--open");
+  });
+}
 
 // отправка формы: закрывается попап
-modalForm.onsubmit = function () {
+modalForm.onsubmit = function (evt) {
   evt.preventDefault();
   modal.classList.remove("modal-order--open");
 }
@@ -39,8 +41,26 @@ modalForm.onsubmit = function () {
 window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
     if (modal.classList.contains("modal-order--open")) {
-      evt.preventDefault();
       modal.classList.remove("modal-order--open");
     }
   }
 });
+
+/* Форма заказа */
+// const form = document.querySelector('.order-form');
+//const submitButton = document.querySelector('.order-form__button');
+//const firstName = form.querySelector('[name=first-name]');
+//const lastName = form.querySelector('[name=last-name]');
+//const orderTel = form.querySelector('[name=order-tel]');
+//const orderEmail = form.querySelector('[name=order-email]');
+
+//submitButton.disabled = true;
+
+//form.addEventListener('submit', function(evt) {
+  //evt.preventDefault();
+  //if (firstName.value && lastName.value && orderTel.value && orderEmail) {
+  //  submitButton.disabled = false;
+  //} else {
+  //  submitButton.disabled = true;
+  //}
+//})

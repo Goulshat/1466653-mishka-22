@@ -125,7 +125,7 @@
               </a>
               <p class="catalog-item__info">Рост 30 см, вес 200 г</p>
               <p class="catalog-item__price">1 200 руб.
-                <button class="catalog-item__button" type="button" aria-label="Добавить в корзину мягкую игрушку Зайчик-попрыгайчик">
+                <button class="catalog-item__button js-add-to-cart" type="button" aria-label="Добавить в корзину мягкую игрушку Зайчик-попрыгайчик">
                   <svg class="link-icon catalog-item__button-icon" width="20" height="19" aria-hidden="true">
                     <use xlink:href="img/icons/sprite.svg#cart-icon"></use>
                   </svg>
@@ -154,7 +154,7 @@
               </a>
               <p class="catalog-item__info">Диаметр 15 см, высота 10 см</p>
               <p class="catalog-item__price">690 руб.
-                <button class="catalog-item__button" type="button" aria-label="Добавить в корзину вязаную корзинку для белья">
+                <button class="catalog-item__button js-add-to-cart" type="button" aria-label="Добавить в корзину вязаную корзинку для белья">
                   <svg class="link-icon catalog-item__button-icon" width="20" height="19" aria-hidden="true">
                     <use xlink:href="img/icons/sprite.svg#cart-icon"></use>
                   </svg>
@@ -183,8 +183,10 @@
               </a>
               <p class="catalog-item__info">Диаметр 30 см, высота 30 см</p>
               <p class="catalog-item__price">1 500 руб.
-                <button class="catalog-item__button" type="button" aria-label="Добавить в корзину большую корзинку для игрушек">
-                  <img class="link-icon catalog-item__button-icon" src="img/icons/cart-icon.svg" width="20" height="19" alt="" aria-hidden="true">
+                <button class="catalog-item__button js-add-to-cart" type="button" aria-label="Добавить в корзину большую корзинку для игрушек">
+                  <svg class="link-icon catalog-item__button-icon" width="20" height="19" aria-hidden="true">
+                    <use xlink:href="img/icons/sprite.svg#cart-icon"></use>
+                  </svg>
                 </button>
               </p>
             </div>
@@ -255,5 +257,27 @@
       </p>
     </div>
   </footer>
+
+  <section class="modal-order">
+    <h2 class="modal-order__title">Добавить в&nbsp;корзину</h2>
+    <form class="modal-order__form" action="https://echo.htmlacademy.ru" method="POST">
+      <p class="modal-order__text">Выберите размер:</p>
+      <label class="modal-order__label" aria-label="S, маленький">
+        <input class="visually-hidden" type="checkbox" name="promo-item-size" value="small" checked>
+        <span class="modal-order__size">S</span>
+      </label>
+      <label class="modal-order__label" aria-label="M, средний">
+        <input class="visually-hidden" type="checkbox" name="promo-item-size" value="medium">
+        <span class="modal-order__size">M</span>
+      </label>
+      <label class="modal-order__label" aria-label="L, большой">
+        <input class="visually-hidden" type="checkbox" name="promo-item-size" value="large">
+        <span class="modal-order__size">L</span>
+      </label>
+      <button class="button modal-order__button" type="submit" aria-label="Добавить выбранный товар в корзину">Добавить</button>
+    </form>
+  </section>
+
+  <script src="js/script.min.js"></script>
 </body>
 </html>

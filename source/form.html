@@ -252,55 +252,7 @@
       </p>
     </div>
   </footer>
+
   <script src="js/script.min.js"></script>
-  <!-- <script>
-    /* Кнопка и меню навигации */
-    const navToggle = document.querySelector('.header__nav-toggle');
-    const headerLists = document.querySelectorAll('.header__list');
-    const page = document.querySelector('.page__body');
-
-    page.classList.remove('page__body--no-js'); //бургера при выкл.JS не видно
-
-    for (let headerList of headerLists) {
-        headerList.classList.add('header__list--closed')
-      }
-
-    navToggle.addEventListener('click', function(evt) {
-      evt.preventDefault();
-      navToggle.classList.toggle('header__nav-toggle--to-close');
-      for (let headerList of headerLists) {
-        headerList.classList.toggle('header__list--closed')
-      }
-    })
-
-    /* JS для формы */
-    const form = document.querySelector('.order-form');
-    const submitButton = document.querySelector('.order-form__button');
-    const firstName = form.querySelector('[name=first-name]');
-    const lastName = form.querySelector('[name=last-name]');
-    const orderTel = form.querySelector('[name=order-tel]');
-    const orderEmail = form.querySelector('[name=order-email]');
-
-    submitButton.setAttribute('disabled');
-
-    /*form.addEventListener('submit', function(evt) {
-      evt.preventDefault();
-      if (firstName.value && lastName.value && orderTel.value && orderEmail) {
-        submitButton.removeAttribute('disabled');
-      } else {
-        submitButton.setAttribute('disabled');
-      }
-
-    })
-    /*let isStorageSupport = true;
-    let storage = ''
-
-    try {
-      storage = localStorage.getItem('firstName')
-    } catch (err) {
-      isStorageSupport = false;
-    }*/
-
-  </script>-->
 </body>
 </html>
