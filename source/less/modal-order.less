@@ -1,14 +1,26 @@
 .modal-order {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 10;
   margin: 0 auto;
   padding: 30px 30px 45px 30px;
   width: 320px;
   text-align: center;
   border: 1px solid @modal-border;
+  background-color: @white;
   box-shadow: 0 5px 10px @modal-shadow;
 
   @media (min-width: @tablet) {
     padding: 50px 108px 40px;
     width: 566px;
+  }
+
+  &--open {
+    display: block;
   }
 }
 
