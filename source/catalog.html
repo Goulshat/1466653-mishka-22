@@ -35,7 +35,7 @@
   <script src="../node_modules/pixel-glass/script.js"></script>
   <!-- Pixel Glass -->
 </head>
-<body class="page__body">
+<body class="page__body page__body--no-js">
   <header class="header page__header">
     <nav class="header__nav">
       <a class="header-link header__logo-link" href="index.html" tabindex="0">
@@ -48,11 +48,11 @@
         </div>
       </a>
 
-      <button class="header__nav-toggle header__nav-toggle--to-close" type="button">
+      <button class="header__nav-toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
 
-      <ul class="header__nav-list"><!-- + класс .header__nav-list--closed-->
+      <ul class="header__list header__nav-list">
         <li class="header__nav-item">
           <a class="header-link">
             <div class="header__link-container">Каталог товаров</div>
@@ -75,7 +75,7 @@
         </li>
       </ul>
 
-      <ul class="header__order-list">
+      <ul class="header__list header__order-list">
         <li class="header__order-item">
           <a class="header-link header-link--search" href="#" tabindex="0">
             <div class="header__link-container header__link-container--search">

@@ -164,6 +164,18 @@
     width: 527px;
     margin: 0;
   }
+
+  .page__body--no-js & {
+    display: none;
+  }
+
+  &--image {
+    display: none;
+
+    .page__body--no-js & {
+      display: block;
+    }
+  }
 }
 
 .contacts__button {

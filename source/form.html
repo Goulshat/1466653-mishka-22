@@ -35,7 +35,7 @@
   <script src="../node_modules/pixel-glass/script.js"></script>
   <!-- // Pixel Glass -->
 </head>
-<body class="page__body ">
+<body class="page__body page__body--no-js">
   <header class="header page__header">
     <nav class="header__nav">
       <a class="header-link header__logo-link" href="index.html" tabindex="0">
@@ -48,11 +48,11 @@
         </div>
       </a>
 
-      <button class="header__nav-toggle header__nav-toggle--to-close" type="button">
+      <button class="header__nav-toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
 
-      <ul class="header__nav-list"><!-- + класс .header__nav-list--closed-->
+      <ul class="header__list header__nav-list">
         <li class="header__nav-item">
           <a class="header-link" href="catalog.html" tabindex="0">
             <div class="header__link-container">Каталог товаров</div>
@@ -75,7 +75,7 @@
         </li>
       </ul>
 
-      <ul class="header__order-list">
+      <ul class="header__list header__order-list">
         <li class="header__order-item">
           <a class="header-link header-link--search" href="#" tabindex="0">
             <div class="header__link-container header__link-container--search">
@@ -161,15 +161,15 @@
           <legend class="form-headline order-form__legend order-form__legend--bio">ФИО</legend>
           <label class="form-label order-form__label">
             <span class="form-label__text">Имя:</span>
-            <input class="form-label__input" type="text" name="first-name" placeholder="Введите ваше имя*" required>
+            <input class="form-label__input" type="text" name="first-name" placeholder="Введите ваше имя*">
           </label>
           <label class="form-label order-form__label">
             <span class="form-label__text">Фамилия:</span>
-            <input class="form-label__input" type="text" name="last-name" placeholder="Укажите фамилию*" required>
+            <input class="form-label__input" type="text" name="last-name" placeholder="Укажите фамилию*">
           </label>
           <label class="form-label order-form__label">
             <span class="form-label__text">Отчество:</span>
-            <input class="form-label__input" type="text" name="middle-name" placeholder="Отчество, если желаете*" >
+            <input class="form-label__input" type="text" name="middle-name" placeholder="Отчество, если желаете" >
           </label>
         </fieldset>
       </div>
@@ -252,5 +252,55 @@
       </p>
     </div>
   </footer>
+  <script src="js/script.min.js"></script>
+  <!-- <script>
+    /* Кнопка и меню навигации */
+    const navToggle = document.querySelector('.header__nav-toggle');
+    const headerLists = document.querySelectorAll('.header__list');
+    const page = document.querySelector('.page__body');
+
+    page.classList.remove('page__body--no-js'); //бургера при выкл.JS не видно
+
+    for (let headerList of headerLists) {
+        headerList.classList.add('header__list--closed')
+      }
+
+    navToggle.addEventListener('click', function(evt) {
+      evt.preventDefault();
+      navToggle.classList.toggle('header__nav-toggle--to-close');
+      for (let headerList of headerLists) {
+        headerList.classList.toggle('header__list--closed')
+      }
+    })
+
+    /* JS для формы */
+    const form = document.querySelector('.order-form');
+    const submitButton = document.querySelector('.order-form__button');
+    const firstName = form.querySelector('[name=first-name]');
+    const lastName = form.querySelector('[name=last-name]');
+    const orderTel = form.querySelector('[name=order-tel]');
+    const orderEmail = form.querySelector('[name=order-email]');
+
+    submitButton.setAttribute('disabled');
+
+    /*form.addEventListener('submit', function(evt) {
+      evt.preventDefault();
+      if (firstName.value && lastName.value && orderTel.value && orderEmail) {
+        submitButton.removeAttribute('disabled');
+      } else {
+        submitButton.setAttribute('disabled');
+      }
+
+    })
+    /*let isStorageSupport = true;
+    let storage = ''
+
+    try {
+      storage = localStorage.getItem('firstName')
+    } catch (err) {
+      isStorageSupport = false;
+    }*/
+
+  </script>-->
 </body>
 </html>

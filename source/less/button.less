@@ -21,4 +21,10 @@
   &:active {
     color: @white-opacity-30;
   }
+
+  &:disabled {
+    color: @white-opacity-30;
+    background-color: fade(@text-grey; 50%);
+    border-color: fade(@text-grey; 50%);
+  }
 }
