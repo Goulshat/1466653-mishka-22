@@ -138,11 +138,11 @@
           <legend class="form-headline order-form__legend order-form__legend--bio">ФИО</legend>
           <label class="form-label order-form__label">
             <span class="form-label__text">Имя:</span>
-            <input class="form-label__input" type="text" name="first-name" placeholder="Введите ваше имя*">
+            <input class="form-label__input" type="text" name="first-name" placeholder="Введите ваше имя*" required>
           </label>
           <label class="form-label order-form__label">
             <span class="form-label__text">Фамилия:</span>
-            <input class="form-label__input" type="text" name="last-name" placeholder="Укажите фамилию*">
+            <input class="form-label__input" type="text" name="last-name" placeholder="Укажите фамилию*" required>
           </label>
           <label class="form-label order-form__label">
             <span class="form-label__text">Отчество:</span>
@@ -155,14 +155,14 @@
         <fieldset class="order-form__fieldset">
           <label class="form-label order-form__label order-form__label--contacts">
             <span class="form-headline order-form__legend order-form__legend--contacts">Тел</span>
-            <input class="form-label__input" type="tel" name="order-tel" placeholder="+7 XXX XXX XX XX*" >
+            <input class="form-label__input" type="tel" name="order-tel" placeholder="+7 XXX XXX XX XX*" required>
             <svg class="form-label__icon form-label__icon--tel" width="25" height="24" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#phone-icon"></use>
             </svg>
           </label>
           <label class="form-label order-form__label order-form__label--contacts">
             <span class="form-headline form-headline--email order-form__legend order-form__legend--contacts">E-mail</span>
-            <input class="form-label__input" type="email" name="order-email" placeholder="Ваш Email*">
+            <input class="form-label__input" type="email" name="order-email" placeholder="Ваш Email*" required>
             <svg class="form-label__icon form-label__icon--email" width="32" height="21" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#email-icon"></use>
             </svg>
