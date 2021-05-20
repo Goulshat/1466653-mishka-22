@@ -45,22 +45,3 @@ window.addEventListener("keydown", function(evt) {
     }
   }
 });
-
-/* Форма заказа */
-// const form = document.querySelector('.order-form');
-//const submitButton = document.querySelector('.order-form__button');
-//const firstName = form.querySelector('[name=first-name]');
-//const lastName = form.querySelector('[name=last-name]');
-//const orderTel = form.querySelector('[name=order-tel]');
-//const orderEmail = form.querySelector('[name=order-email]');
-
-//submitButton.disabled = true;
-
-//form.addEventListener('submit', function(evt) {
-  //evt.preventDefault();
-  //if (firstName.value && lastName.value && orderTel.value && orderEmail) {
-  //  submitButton.disabled = false;
-  //} else {
-  //  submitButton.disabled = true;
-  //}
-//})
