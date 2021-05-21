@@ -12,15 +12,15 @@
   }
 
   &:hover {
-    box-shadow: 0 6px 10px fade(@black; 10%);
+    box-shadow: 0 6px 10px @black-opacity-10;
   }
 
   &:focus-within {
-    box-shadow: 0 6px 10px fade(@black; 10%);
+    box-shadow: 0 6px 10px @black-opacity-10;
   }
 
   &:active {
-    box-shadow: 0 3px 5px fade(@black; 10%);
+    box-shadow: 0 3px 5px @black-opacity-10;
   }
 }
 
@@ -72,9 +72,9 @@
 
 .production-video__play-button {
   position: absolute;
-  top: 50%;
+  top: 190px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   width: 100px;
   height: 77px;
   margin: 0;
@@ -88,7 +88,7 @@
   }
 
   &:active {
-    opacity: 0.3;
+    fill-opacity: 0.3;
     transform: translate(-50%, -50%) scale(0.8);
   }
 }

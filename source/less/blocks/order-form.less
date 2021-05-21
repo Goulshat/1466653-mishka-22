@@ -71,7 +71,7 @@
 
   @media (min-width: @tablet) {
     position: relative;
-    padding: 49px 50px 51px 217px;//сверху 45пикс
+    padding: 49px 50px 51px 217px;
 
     &--for-checkboxes {
       display: grid;
@@ -195,12 +195,16 @@
   min-width: 260px;
   height: 142px;
   font-size: 17px;
-  line-height: 17px;
-  color: @black-opacity-30;
+  line-height: 18px;
+  color: @black;
   border: 2px solid @text-grey;
 
   @media (min-width: @tablet) {
     font-size: 19px;
+  }
+
+  &::placeholder {
+    color: @black-opacity-30;
   }
 
   &:hover,
